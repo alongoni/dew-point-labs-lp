@@ -1,0 +1,9 @@
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,10) scale(0.6)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M122.763 4.98832C122.968 5.19679 123.26 5.4947 123.631 5.87669C124.382 6.65014 125.466 7.7732 126.826 9.21778C129.546 12.1052 133.391 16.2884 137.993 21.541C147.19 32.0366 159.49 46.9067 171.805 64.3898C195.854 98.5285 222.353 145.839 222.353 190.945C222.353 253.824 172.444 302.348 111.176 302.348C49.9088 302.348 0 253.824 0 190.945C0.000320377 150.014 21.8197 107.267 43.829 74.1955L58.3801 85.8893L71.2147 69.777C71.4417 69.488 71.7644 69.0778 72.1737 68.5493C73.0028 67.4787 74.1981 65.9254 75.6945 63.9314C78.6849 59.9463 82.8982 54.1842 87.9087 46.9824C96.2876 34.9388 106.946 18.7626 117.781 0L122.763 4.98832ZM108.214 42.5536C99.5444 52.4478 88.0157 66.4296 76.5114 82.7606C52.9145 116.258 31.7651 156.478 31.7647 190.945C31.7647 235.98 67.1857 270.519 111.176 270.519C155.167 270.519 190.588 235.98 190.588 190.945C190.588 156.478 169.439 116.258 145.842 82.7606C134.337 66.4296 122.809 52.4478 114.139 42.5536C113.115 41.3846 112.114 40.2776 111.176 39.228C110.239 40.2776 109.238 41.3846 108.214 42.5536Z" fill="url(#grad2)"/>
+    <defs><linearGradient id="grad2" x1="54" y1="64" x2="111" y2="306" gradientUnits="userSpaceOnUse"><stop stop-color="#F79F55"/><stop offset="0.27" stop-color="#C25A4F"/><stop offset="0.55" stop-color="#624572"/><stop offset="1" stop-color="#4B41D5"/></linearGradient></defs>
+  </g>
+  <text x="160" y="75" font-family="Archivo Narrow, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF">DEW</text>
+  <text x="160" y="140" font-family="Archivo Narrow, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF">POINT</text>
+  <text x="160" y="195" font-family="Archivo Narrow, sans-serif" font-weight="400" font-size="56" letter-spacing="8" fill="#FFFFFF">LABS</text>
+</svg>
