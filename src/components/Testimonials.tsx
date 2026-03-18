@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
 const testimonials = [
@@ -21,55 +20,45 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative py-32">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <Quote className="h-8 w-8 text-primary/30 mx-auto mb-8" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4">Testimonials</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+            What our <span className="gradient-text">partners</span> say
+          </h2>
+        </motion.div>
 
-          <div className="h-[200px] flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="absolute"
-              >
-                <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 mb-8 italic">
-                  "{testimonials[active].text}"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="group relative rounded-xl bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 flex flex-col h-full">
+                <Quote className="h-5 w-5 text-primary/30 mb-5 shrink-0" />
+                <p className="text-foreground/90 leading-relaxed italic flex-1 mb-6">
+                  "{t.text}"
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  <span className="text-foreground/70">{testimonials[active].author}</span>
-                  {" · "}
-                  {testimonials[active].org}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-12">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActive(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
-                }`}
-              />
-            ))}
-          </div>
+                <div className="border-t border-border/50 pt-4 mt-auto">
+                  <p className="text-sm font-medium text-foreground/80">{t.author}</p>
+                  <p className="text-xs text-muted-foreground">{t.org}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
