@@ -47,7 +47,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-8">
             
             Protofire's R&D and{" "}
-            <span className="gradient-text">infrastructure Labs.</span>
+            <span className="gradient-text">Infrastructure Lab.</span>
           </motion.h1>
 
           <motion.p
