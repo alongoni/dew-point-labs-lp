@@ -105,7 +105,7 @@ const ServiceCard = ({
         <h3 className="text-lg font-bold">{service.title}</h3>
       </div>
       <p className="text-muted-foreground leading-relaxed flex-1">{service.desc}</p>
-      {service.tagline && <p className="text-sm text-primary/70 mt-1 font-medium">{service.tagline}</p>}
+      {service.tagline && <p className="text-sm text-foreground mt-1 font-medium">{service.tagline}</p>}
     </div>
   </motion.div>
 );
