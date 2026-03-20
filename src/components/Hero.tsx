@@ -60,30 +60,22 @@ const Hero = () => {
           </motion.p>
 
           {/* Rotating metric */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="h-20 flex items-center justify-start mb-12">
-            
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeMetric}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-                className="text-center">
-                
-                <span className="text-5xl md:text-6xl font-black gradient-text">
-                  {metrics[activeMetric].value}
-                </span>
-                <p className="text-muted-foreground text-sm mt-2 uppercase tracking-widest">
-                  {metrics[activeMetric].label}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
+          <div className="h-20 flex items-center justify-start mb-12">
+            <motion.div
+              key={activeMetric}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-left"
+            >
+              <span className="text-5xl md:text-6xl font-black gradient-text">
+                {metrics[activeMetric].value}
+              </span>
+              <p className="text-muted-foreground text-sm mt-2 uppercase tracking-widest">
+                {metrics[activeMetric].label}
+              </p>
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
