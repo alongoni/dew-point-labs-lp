@@ -41,7 +41,7 @@ const Hero = () => {
 
           <div className="mb-12 flex h-20 items-center justify-start">
             <div className="text-center">
-              <span className="text-5xl font-black md:text-6xl tabular-nums">{metrics[activeMetric].value}</span>
+              <span className="text-5xl font-heading md:text-6xl tabular-nums">{metrics[activeMetric].value}</span>
               <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
                 {metrics[activeMetric].label}
               </p>
