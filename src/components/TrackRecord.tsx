@@ -4,7 +4,7 @@ const stats = [
   { value: "100+", label: "Chains with Safe deployed and maintained" },
   { value: "10+", label: "Chains with Uniswap v3 official deployments" },
   { value: "8+", label: "Years shipping infrastructure at Protofire" },
-  { value: "$2.35B+", label: "Cumulative TVL across deployed infrastructure" },
+  { value: "$2.35B", label: "Cumulative TVL across deployed infrastructure" },
 ];
 
 const TrackRecord = () => {
@@ -33,9 +33,9 @@ const TrackRecord = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative group"
             >
-              <div className="border border-border p-8 text-left h-full flex flex-col justify-between">
-                <p className="text-5xl md:text-6xl font-black mb-4 text-foreground font-heading">{stat.value}</p>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground leading-relaxed font-heading">{stat.label}</p>
+              <div className="bg-card/30 border border-border/40 p-8 text-center group-hover:border-primary/20 transition-all duration-500 gradient-border">
+                <p className="text-5xl md:text-6xl font-black mb-4 text-white">{stat.value}</p>
+                <p className="text-md text-muted-foreground leading-relaxed">{stat.label}</p>
               </div>
             </motion.div>
           ))}
