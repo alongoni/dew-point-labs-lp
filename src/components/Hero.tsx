@@ -46,9 +46,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-8">
             
-            We deploy and maintain{" "}
-            <span className="gradient-text">R&D and Infrastructure Lab.</span>{" "}
-            for L1s, L2s, foundations, and DAOs.
+            Protofire's R&D and{" "}
+            <span className="gradient-text">infrastructure Labs.</span>
           </motion.h1>
 
           <motion.p
