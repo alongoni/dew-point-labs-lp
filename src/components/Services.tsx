@@ -7,7 +7,9 @@ const services = [
     title: "Safe Wallet Deployment and Hosting",
     desc: (
       <>
-        The <strong>largest official Safe deployer</strong>, with 100+ chains supported. We deploy official contracts, backend infrastructure, and deliver shared or whitelabel UI. <strong>The complete multisig setup for any chain, production-ready.</strong>
+        The <strong>largest official Safe deployer</strong>, with 100+ chains supported. We deploy official contracts,
+        backend infrastructure, and deliver shared or whitelabel UI.{" "}
+        <strong>The complete multisig setup for any chain, production-ready.</strong>
       </>
     ),
     tagline: "The complete multisig setup for any chain, production-ready.",
@@ -17,7 +19,9 @@ const services = [
     title: "DEX Deployment and Support",
     desc: (
       <>
-        A <strong>trusted Uniswap v3 deployer</strong> on 10+ chains. Full pool factory, liquidity infrastructure, canonical status support, as <strong>part of Protofire's shared UI or as a whitelabel solution</strong>. Full deployment and support packages for EVM-based networks.
+        A <strong>trusted Uniswap v3 deployer</strong> on 10+ chains. Full pool factory, liquidity infrastructure,
+        canonical status support, as <strong>part of Protofire's shared UI or as a whitelabel solution</strong>. Full
+        deployment and support packages for EVM-based networks.
       </>
     ),
     tagline: "Full deployment and support packages for EVM-based networks.",
@@ -27,7 +31,12 @@ const services = [
     title: "Block Explorer Deployment, Support and Deep Customization",
     desc: (
       <>
-        Made with Blockscout. <strong>Contract verification, API configuration, custom frontend and backend features, cost-efficient support for high-TPS and hybrid chains.</strong> Essential tooling for users, developers and protocols on your chain.
+        Made with Blockscout.{" "}
+        <strong>
+          Contract verification, API configuration, custom frontend and backend features, cost-efficient support for
+          high-TPS and hybrid chains.
+        </strong>{" "}
+        Essential tooling for users, developers and protocols on your chain.
       </>
     ),
     tagline: "The tooling developers need when building on your chain.",
@@ -37,7 +46,9 @@ const services = [
     title: "Custom Solutions",
     desc: (
       <>
-        Not every infrastructure need fits a standard deployment. We build on top of Safe, Uniswap, Compound, AAVE, and Blockscout to deliver purpose-built solutions: custom frontends, protocol integrations, treasury tooling, and execution layers tailored to the chain's specific requirements.
+        Not every infrastructure need fits a standard deployment. We build on top of Safe, Uniswap, Compound, AAVE, and
+        Blockscout to deliver purpose-built solutions: custom frontends, protocol integrations, treasury tooling, and
+        execution layers tailored to the chain's specific requirements.
       </>
     ),
     tagline: "The complete multisig setup for any chain, production-ready.",
@@ -47,7 +58,11 @@ const services = [
     title: "Lending Deployment, Management and Support",
     desc: (
       <>
-        <strong>Based on Compound and AAVE solutions</strong>, we enable permissionless borrowing and lending with high capital efficiency. <strong>Support for dynamic interest rate models, overcollateralized positions, and seamless liquidity provisioning.</strong>
+        <strong>Based on Compound and AAVE solutions</strong>, we enable permissionless borrowing and lending with high
+        capital efficiency.{" "}
+        <strong>
+          Support for dynamic interest rate models, overcollateralized positions, and seamless liquidity provisioning.
+        </strong>
       </>
     ),
     tagline: "The complete multisig setup for any chain, production-ready.",
@@ -57,14 +72,25 @@ const services = [
     title: "On-Chain Financial Infrastructure",
     desc: (
       <>
-        On-chain treasury infrastructure built on Safe, with native support for card integration. <strong>Covers multi-sig treasury setup, on-chain spending controls, and operational payouts through card solutions.</strong>
+        On-chain treasury infrastructure built on Safe, with native support for card integration.{" "}
+        <strong>
+          Covers multi-sig treasury setup, on-chain spending controls, and operational payouts through card solutions.
+        </strong>
       </>
     ),
     tagline: "The complete multisig setup for any chain, production-ready.",
   },
 ];
 
-const ServiceCard = ({ service, i, className = "" }: { service: typeof services[0]; i: number; className?: string }) => (
+const ServiceCard = ({
+  service,
+  i,
+  className = "",
+}: {
+  service: (typeof services)[0];
+  i: number;
+  className?: string;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -79,9 +105,7 @@ const ServiceCard = ({ service, i, className = "" }: { service: typeof services[
         <h3 className="text-lg font-bold">{service.title}</h3>
       </div>
       <p className="text-muted-foreground leading-relaxed flex-1">{service.desc}</p>
-      {service.tagline && (
-        <p className="text-sm text-primary/70 mt-1 font-medium">{service.tagline}</p>
-      )}
+      {service.tagline && <p className="text-sm text-primary/70 mt-1 font-medium">{service.tagline}</p>}
     </div>
   </motion.div>
 );
@@ -99,8 +123,7 @@ const Services = () => {
         >
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4">What we do</p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight">
-            Infrastructure that{" "}
-            <span className="gradient-text">just works</span>
+            Infrastructure that <span className="gradient-text">just works</span>
           </h2>
         </motion.div>
 
@@ -117,15 +140,6 @@ const Services = () => {
             <ServiceCard key={service.title} service={service} i={i + 3} />
           ))}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-muted-foreground mt-20 max-w-2xl mx-auto text-lg"
-        >
-          We integrate intelligent tooling into infrastructure workflows without compromising on reliability or security.
-        </motion.p>
       </div>
     </section>
   );

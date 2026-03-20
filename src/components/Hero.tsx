@@ -30,10 +30,6 @@ const Hero = () => {
 
       <div className="container relative z-10 mx-auto px-6 pb-20 pt-24">
         <div className="max-w-4xl text-left">
-          <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">
-            Protofire&apos;s R&amp;D and Infrastructure Lab
-          </p>
-
           <h1 className="mb-8 text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
             Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
           </h1>
@@ -46,7 +42,9 @@ const Hero = () => {
           <div className="mb-12 flex h-20 items-center justify-start">
             <div className="text-center">
               <span className="text-5xl font-black md:text-6xl tabular-nums">{metrics[activeMetric].value}</span>
-              <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">{metrics[activeMetric].label}</p>
+              <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
+                {metrics[activeMetric].label}
+              </p>
             </div>
           </div>
 
