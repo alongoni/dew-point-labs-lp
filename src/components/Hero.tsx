@@ -65,7 +65,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="h-20 flex items-center justify-center mb-12"
+            className="h-20 flex items-center justify-start mb-12"
           >
             <AnimatePresence mode="wait">
               <motion.div
