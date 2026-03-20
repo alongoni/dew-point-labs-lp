@@ -17,7 +17,7 @@ const CtaSection = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
           <div className="absolute inset-0 border border-border/50 rounded-2xl" />
 
-          <div className="relative z-10 p-12 md:p-20 text-center">
+          <div className="relative z-10 p-12 md:p-20 text-center min-h-[400px] md:min-h-[500px] flex flex-col items-center justify-center">
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
               Need something{" "}
               <span className="gradient-text">built right?</span>
