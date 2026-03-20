@@ -30,7 +30,7 @@ const Hero = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6 pt-24 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl text-left">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
+            className="text-lg text-muted-foreground max-w-2xl mb-12"
           >
             Safe Wallet and Uniswap v3 deployments across 120+ chains.
           </motion.p>
@@ -65,7 +65,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="h-20 flex items-center justify-center mb-12"
+            className="h-20 flex items-center justify-start mb-12"
           >
             <AnimatePresence mode="wait">
               <motion.div
