@@ -39,11 +39,9 @@ const Hero = () => {
             deployments across 110+ chains, with AI-assisted workflows that improve delivery speed and accuracy.
           </p>
 
-          <div className="mb-12 flex h-20 items-center justify-start">
+          <div className="mb-12 flex h-20 items-left justify-start">
             <div className="text-center">
-              <p className="text-5xl md:text-6xl font-black mb-4 text-white tabular-nums">
-                {metrics[activeMetric].value}
-              </p>
+              <p className="text-5xl md:text-6xl mb-4 text-white tabular-nums">{metrics[activeMetric].value}</p>
               <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
                 {metrics[activeMetric].label}
               </p>
