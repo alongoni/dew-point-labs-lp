@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const metrics = [
-  { value: "100+", label: "Safe deployments" },
-  { value: "10+", label: "Uniswap v3 chains" },
-  { value: "20+", label: "Ecosystem partners" },
-  { value: "8+", label: "Years in production" },
-];
+{ value: "100+", label: "Safe deployments" },
+{ value: "10+", label: "Uniswap v3 chains" },
+{ value: "20+", label: "Ecosystem partners" },
+{ value: "8+", label: "Years in production" }];
+
 
 const Hero = () => {
   const [activeMetric, setActiveMetric] = useState(0);
@@ -35,8 +35,8 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6"
-          >
+            className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
+            
             Protofire's R&D and Infrastructure Lab
           </motion.p>
 
@@ -44,10 +44,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-8"
-          >
+            className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-8">
+            
             We deploy and maintain{" "}
-            <span className="gradient-text">core Web3 infrastructure</span>{" "}
+            <span className="gradient-text">R&D and Infrastructure Lab.</span>{" "}
             for L1s, L2s, foundations, and DAOs.
           </motion.h1>
 
@@ -55,9 +55,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted-foreground max-w-2xl mb-12"
-          >
-            Safe Wallet and Uniswap v3 deployments across 120+ chains.
+            className="text-lg max-w-2xl mb-12 text-neutral-400">We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs. Safe Wallet and Uniswap v3 deployments across 110+ chains, with AI-assisted workflows that improve delivery speed and accuracy.
+
+
           </motion.p>
 
           {/* Rotating metric */}
@@ -65,8 +65,8 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="h-20 flex items-center justify-start mb-12"
-          >
+            className="h-20 flex items-center justify-start mb-12">
+            
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeMetric}
@@ -74,8 +74,8 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
-                className="text-center"
-              >
+                className="text-center">
+                
                 <span className="text-5xl md:text-6xl font-black gradient-text">
                   {metrics[activeMetric].value}
                 </span>
@@ -89,8 +89,8 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
+            transition={{ duration: 0.6, delay: 0.5 }}>
+            
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base px-8 py-6 rounded-full">
                 Start building
@@ -103,8 +103,8 @@ const Hero = () => {
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
