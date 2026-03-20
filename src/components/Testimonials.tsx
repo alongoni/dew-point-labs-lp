@@ -44,17 +44,16 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group relative rounded-xl bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col"
+              className="relative rounded-none bg-card border border-border/50 p-8 flex flex-col font-heading"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <Quote className="h-5 w-5 text-primary/30 mb-5 shrink-0" />
-                <p className="text-foreground/90 leading-relaxed italic flex-1 mb-6">
+              <div className="flex flex-col h-full">
+                <Quote className="h-8 w-8 text-muted-foreground/30 mb-6 shrink-0" />
+                <p className="text-foreground/90 leading-relaxed flex-1 mb-8">
                   "{t.text}"
                 </p>
                 <div className="border-t border-border/50 pt-4 mt-auto">
-                  <p className="text-sm font-medium text-foreground/80">{t.author}</p>
-                  <p className="text-xs text-muted-foreground">{t.org}</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-foreground">{t.author}</p>
+                  <p className="text-xs text-muted-foreground">[{t.org}]</p>
                 </div>
               </div>
             </motion.div>
