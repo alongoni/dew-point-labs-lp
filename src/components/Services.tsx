@@ -96,7 +96,7 @@ const ServiceCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.4, delay: i * 0.08 }}
-    className={`group relative rounded-xl bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col ${className}`}
+    className={`group relative rounded-none bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col ${className}`}
   >
     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative z-10 flex flex-col gap-4 h-full">
@@ -105,7 +105,7 @@ const ServiceCard = ({
         <h3 className="text-lg font-bold">{service.title}</h3>
       </div>
       <p className="text-muted-foreground leading-relaxed flex-1">{service.desc}</p>
-      {service.tagline && <p className="text-sm text-primary/70 mt-1 font-medium">{service.tagline}</p>}
+      {service.tagline && <p className="text-sm text-foreground mt-1 font-medium">{service.tagline}</p>}
     </div>
   </motion.div>
 );
@@ -128,14 +128,14 @@ const Services = () => {
         </motion.div>
 
         {/* Row 1: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {services.slice(0, 3).map((service, i) => (
             <ServiceCard key={service.title} service={service} i={i} />
           ))}
         </div>
 
         {/* Row 2: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {services.slice(3, 6).map((service, i) => (
             <ServiceCard key={service.title} service={service} i={i + 3} />
           ))}
