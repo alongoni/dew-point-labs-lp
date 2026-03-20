@@ -43,6 +43,7 @@ const ServiceCard = ({ service, i, className = "" }: { service: typeof services[
     className={`group relative rounded-xl bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col ${className}`}
   >
     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
     <div className="relative z-10 flex flex-col gap-4 h-full">
       <div className="flex items-center gap-3">
         <service.icon className="h-5 w-5 text-primary/70 shrink-0" strokeWidth={1.5} />
