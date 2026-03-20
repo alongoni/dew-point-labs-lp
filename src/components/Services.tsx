@@ -135,7 +135,7 @@ const Services = () => {
         </div>
 
         {/* Row 2: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {services.slice(3, 6).map((service, i) => (
             <ServiceCard key={service.title} service={service} i={i + 3} />
           ))}
