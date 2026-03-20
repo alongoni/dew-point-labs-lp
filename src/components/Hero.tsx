@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const metrics = [
-  { value: "100+", label: "Safe deployments" },
-  { value: "10+", label: "Uniswap v3 chains" },
-  { value: "20+", label: "Ecosystem partners" },
-  { value: "8+", label: "Years in production" },
-];
+{ value: "100+", label: "Safe deployments" },
+{ value: "10+", label: "Uniswap v3 chains" },
+{ value: "20+", label: "Ecosystem partners" },
+{ value: "8+", label: "Years in production" }];
+
 
 const Hero = () => {
   const [activeMetric, setActiveMetric] = useState(0);
@@ -41,7 +41,7 @@ const Hero = () => {
 
           <div className="mb-12 flex h-20 items-left justify-start">
             <div className="text-center">
-              <p className="text-5xl md:text-6xl mb-4 text-white tabular-nums">{metrics[activeMetric].value}</p>
+              <p className="text-5xl mb-4 text-white tabular-nums text-left font-bold md:text-6xl">{metrics[activeMetric].value}</p>
               <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
                 {metrics[activeMetric].label}
               </p>
@@ -58,8 +58,8 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
