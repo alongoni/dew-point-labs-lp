@@ -4,7 +4,7 @@ const stats = [
   { value: "100+", label: "Chains with Safe deployed and maintained" },
   { value: "10+", label: "Chains with Uniswap v3 official deployments" },
   { value: "8+", label: "Years shipping infrastructure at Protofire" },
-  { value: "$B", label: "Cumulative TVL across deployed infrastructure" },
+  { value: "$2.35B", label: "Cumulative TVL across deployed infrastructure" },
 ];
 
 const TrackRecord = () => {
