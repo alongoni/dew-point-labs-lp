@@ -92,7 +92,7 @@ const Hero = () => {
             
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base px-8 py-6 rounded-full">
-                Start building
+                Tell us about your project!
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
