@@ -33,9 +33,9 @@ const TrackRecord = () => {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="relative group">
             
-              <div className="rounded-xl bg-card/30 border border-border/40 p-8 text-center group-hover:border-primary/20 transition-all duration-500 gradient-border">
-                <p className="text-5xl md:text-6xl font-black gradient-text mb-4 text-white">{stat.value}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
+              <div className="rounded-none bg-card border border-border p-8 text-left transition-all duration-500">
+                <p className="text-5xl md:text-6xl font-black text-foreground mb-4">{stat.value}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed uppercase tracking-widest">{stat.label}</p>
               </div>
             </motion.div>
           )}
