@@ -1,36 +1,42 @@
 import { motion } from "framer-motion";
 
+// Simple inline SVG data URIs for each partner (monogram style)
+const makeSvgLogo = (letter: string, color: string = "#888") =>
+  `data:image/svg+xml,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="${color}" stroke-width="1.5"/><text x="20" y="25" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="${color}">${letter}</text></svg>`
+  )}`;
+
 const categories = [
   {
     title: "Networks",
     items: [
-      { name: "Gnosis", logo: "https://cryptologos.cc/logos/gnosis-gno-gno-logo.svg" },
-      { name: "Celo", logo: "https://cryptologos.cc/logos/celo-celo-logo.svg" },
-      { name: "Rootstock", logo: "https://cryptologos.cc/logos/rsk-infrastructure-framework-rif-logo.svg" },
-      { name: "Scroll", logo: "https://scroll.io/static/media/Scroll_Logomark.673577c8260b63ae56867bc9af6af514.svg" },
-      { name: "zkSync", logo: "https://zksync.io/favicon.svg" },
-      { name: "Lisk", logo: "https://cryptologos.cc/logos/lisk-lsk-logo.svg" },
-      { name: "Fuse", logo: "https://cryptologos.cc/logos/fuse-network-fuse-logo.svg" },
-      { name: "Telos", logo: "https://cryptologos.cc/logos/telos-tlos-logo.svg" },
+      { name: "Gnosis", logo: makeSvgLogo("G", "#3e6957") },
+      { name: "Celo", logo: makeSvgLogo("C", "#35d07f") },
+      { name: "Rootstock", logo: makeSvgLogo("R", "#ff9100") },
+      { name: "Scroll", logo: makeSvgLogo("S", "#edcca2") },
+      { name: "zkSync", logo: makeSvgLogo("zk", "#4e529a") },
+      { name: "Lisk", logo: makeSvgLogo("L", "#0d47a1") },
+      { name: "Fuse", logo: makeSvgLogo("F", "#b4f9ba") },
+      { name: "Telos", logo: makeSvgLogo("T", "#571aff") },
     ],
   },
   {
     title: "Foundations / DAOs",
     items: [
-      { name: "Safe", logo: "https://app.safe.global/images/safe-logo-green.png" },
-      { name: "Uniswap", logo: "https://cryptologos.cc/logos/uniswap-uni-logo.svg" },
-      { name: "Blockscout", logo: "https://raw.githubusercontent.com/blockscout/frontend/main/public/static/icon.svg" },
-      { name: "Chainlink", logo: "https://cryptologos.cc/logos/chainlink-link-logo.svg" },
-      { name: "The Graph", logo: "https://cryptologos.cc/logos/the-graph-grt-logo.svg" },
+      { name: "Safe", logo: makeSvgLogo("S", "#12ff80") },
+      { name: "Uniswap", logo: makeSvgLogo("U", "#ff007a") },
+      { name: "Blockscout", logo: makeSvgLogo("B", "#5c34a2") },
+      { name: "Chainlink", logo: makeSvgLogo("CL", "#375bd2") },
+      { name: "The Graph", logo: makeSvgLogo("TG", "#6747ed") },
     ],
   },
   {
     title: "Protocols",
     items: [
-      { name: "Aave", logo: "https://cryptologos.cc/logos/aave-aave-logo.svg" },
-      { name: "Compound", logo: "https://cryptologos.cc/logos/compound-comp-logo.svg" },
-      { name: "MakerDAO", logo: "https://cryptologos.cc/logos/maker-mkr-logo.svg" },
-      { name: "1inch", logo: "https://cryptologos.cc/logos/1inch-1inch-logo.svg" },
+      { name: "Aave", logo: makeSvgLogo("A", "#b6509e") },
+      { name: "Compound", logo: makeSvgLogo("C", "#00d395") },
+      { name: "MakerDAO", logo: makeSvgLogo("M", "#1aaa9b") },
+      { name: "1inch", logo: makeSvgLogo("1", "#d82122") },
     ],
   },
 ];
