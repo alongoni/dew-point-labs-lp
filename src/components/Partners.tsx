@@ -3,15 +3,35 @@ import { motion } from "framer-motion";
 const categories = [
   {
     title: "Networks",
-    logos: ["Gnosis", "Celo", "Rootstock", "Scroll", "zkSync", "Lisk", "Fuse", "Telos"],
+    items: [
+      { name: "Gnosis", logo: "https://cryptologos.cc/logos/gnosis-gno-gno-logo.svg" },
+      { name: "Celo", logo: "https://cryptologos.cc/logos/celo-celo-logo.svg" },
+      { name: "Rootstock", logo: "https://cryptologos.cc/logos/rsk-infrastructure-framework-rif-logo.svg" },
+      { name: "Scroll", logo: "https://scroll.io/static/media/Scroll_Logomark.673577c8260b63ae56867bc9af6af514.svg" },
+      { name: "zkSync", logo: "https://zksync.io/favicon.svg" },
+      { name: "Lisk", logo: "https://cryptologos.cc/logos/lisk-lsk-logo.svg" },
+      { name: "Fuse", logo: "https://cryptologos.cc/logos/fuse-network-fuse-logo.svg" },
+      { name: "Telos", logo: "https://cryptologos.cc/logos/telos-tlos-logo.svg" },
+    ],
   },
   {
     title: "Foundations / DAOs",
-    logos: ["Safe", "Uniswap", "Blockscout", "Chainlink", "The Graph"],
+    items: [
+      { name: "Safe", logo: "https://app.safe.global/images/safe-logo-green.png" },
+      { name: "Uniswap", logo: "https://cryptologos.cc/logos/uniswap-uni-logo.svg" },
+      { name: "Blockscout", logo: "https://raw.githubusercontent.com/blockscout/frontend/main/public/static/icon.svg" },
+      { name: "Chainlink", logo: "https://cryptologos.cc/logos/chainlink-link-logo.svg" },
+      { name: "The Graph", logo: "https://cryptologos.cc/logos/the-graph-grt-logo.svg" },
+    ],
   },
   {
     title: "Protocols",
-    logos: ["Aave", "Compound", "MakerDAO", "1inch"],
+    items: [
+      { name: "Aave", logo: "https://cryptologos.cc/logos/aave-aave-logo.svg" },
+      { name: "Compound", logo: "https://cryptologos.cc/logos/compound-comp-logo.svg" },
+      { name: "MakerDAO", logo: "https://cryptologos.cc/logos/maker-mkr-logo.svg" },
+      { name: "1inch", logo: "https://cryptologos.cc/logos/1inch-1inch-logo.svg" },
+    ],
   },
 ];
 
@@ -41,13 +61,20 @@ const Partners = () => {
               transition={{ delay: ci * 0.1 }}
             >
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-6">{cat.title}</p>
-              <div className="flex flex-wrap gap-4">
-                {cat.logos.map((name) => (
+              <div className="flex flex-wrap gap-6 items-center">
+                {cat.items.map((item) => (
                   <div
-                    key={name}
-                    className="rounded-lg bg-card/40 border border-border/40 px-6 py-3 text-sm text-muted-foreground hover:text-foreground hover:border-primary/20 transition-all duration-300"
+                    key={item.name}
+                    className="group flex items-center gap-3 rounded-none bg-card/40 border border-border/40 px-6 py-4 hover:border-primary/20 transition-all duration-300"
                   >
-                    {name}
+                    <img
+                      src={item.logo}
+                      alt={`${item.name} logo`}
+                      className="w-7 h-7 object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
+                    />
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-heading">
+                      {item.name}
+                    </span>
                   </div>
                 ))}
               </div>
