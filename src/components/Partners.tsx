@@ -88,7 +88,7 @@ const Partners = () => {
                     <img
                       src={item.logo}
                       alt={`${item.name} logo`}
-                      className="w-7 h-7 object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
+                      className="w-10 h-10 object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
                     />
                     <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-heading">
                       {item.name}
