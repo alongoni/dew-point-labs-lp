@@ -1,42 +1,54 @@
 import { motion } from "framer-motion";
 
-// Simple inline SVG data URIs for each partner (monogram style)
-const makeSvgLogo = (letter: string, color: string = "#888") =>
-  `data:image/svg+xml,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="${color}" stroke-width="1.5"/><text x="20" y="25" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="${color}">${letter}</text></svg>`
-  )}`;
+import gnosisLogo from "@/assets/partners/gnosis.png";
+import celoLogo from "@/assets/partners/celo.png";
+import rootstockLogo from "@/assets/partners/rootstock.png";
+import scrollLogo from "@/assets/partners/scroll.png";
+import zksyncLogo from "@/assets/partners/zksync.png";
+import liskLogo from "@/assets/partners/lisk.png";
+import fuseLogo from "@/assets/partners/fuse.png";
+import telosLogo from "@/assets/partners/telos.png";
+import safeLogo from "@/assets/partners/safe.png";
+import uniswapLogo from "@/assets/partners/uniswap.png";
+import blockscoutLogo from "@/assets/partners/blockscout.png";
+import chainlinkLogo from "@/assets/partners/chainlink.png";
+import thegraphLogo from "@/assets/partners/thegraph.png";
+import aaveLogo from "@/assets/partners/aave.png";
+import compoundLogo from "@/assets/partners/compound.png";
+import makerdaoLogo from "@/assets/partners/makerdao.png";
+import oneinchLogo from "@/assets/partners/1inch.png";
 
 const categories = [
   {
     title: "Networks",
     items: [
-      { name: "Gnosis", logo: makeSvgLogo("G", "#3e6957") },
-      { name: "Celo", logo: makeSvgLogo("C", "#35d07f") },
-      { name: "Rootstock", logo: makeSvgLogo("R", "#ff9100") },
-      { name: "Scroll", logo: makeSvgLogo("S", "#edcca2") },
-      { name: "zkSync", logo: makeSvgLogo("zk", "#4e529a") },
-      { name: "Lisk", logo: makeSvgLogo("L", "#0d47a1") },
-      { name: "Fuse", logo: makeSvgLogo("F", "#b4f9ba") },
-      { name: "Telos", logo: makeSvgLogo("T", "#571aff") },
+      { name: "Gnosis", logo: gnosisLogo },
+      { name: "Celo", logo: celoLogo },
+      { name: "Rootstock", logo: rootstockLogo },
+      { name: "Scroll", logo: scrollLogo },
+      { name: "zkSync", logo: zksyncLogo },
+      { name: "Lisk", logo: liskLogo },
+      { name: "Fuse", logo: fuseLogo },
+      { name: "Telos", logo: telosLogo },
     ],
   },
   {
     title: "Foundations / DAOs",
     items: [
-      { name: "Safe", logo: makeSvgLogo("S", "#12ff80") },
-      { name: "Uniswap", logo: makeSvgLogo("U", "#ff007a") },
-      { name: "Blockscout", logo: makeSvgLogo("B", "#5c34a2") },
-      { name: "Chainlink", logo: makeSvgLogo("CL", "#375bd2") },
-      { name: "The Graph", logo: makeSvgLogo("TG", "#6747ed") },
+      { name: "Safe", logo: safeLogo },
+      { name: "Uniswap", logo: uniswapLogo },
+      { name: "Blockscout", logo: blockscoutLogo },
+      { name: "Chainlink", logo: chainlinkLogo },
+      { name: "The Graph", logo: thegraphLogo },
     ],
   },
   {
     title: "Protocols",
     items: [
-      { name: "Aave", logo: makeSvgLogo("A", "#b6509e") },
-      { name: "Compound", logo: makeSvgLogo("C", "#00d395") },
-      { name: "MakerDAO", logo: makeSvgLogo("M", "#1aaa9b") },
-      { name: "1inch", logo: makeSvgLogo("1", "#d82122") },
+      { name: "Aave", logo: aaveLogo },
+      { name: "Compound", logo: compoundLogo },
+      { name: "MakerDAO", logo: makerdaoLogo },
+      { name: "1inch", logo: oneinchLogo },
     ],
   },
 ];
