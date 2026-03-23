@@ -1,16 +1,46 @@
 import logo from "@/assets/dpl-logo-white.svg";
 
 const Navbar = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
+  const links = [
+    { href: "#services", label: "Services" },
+    { href: "#track-record", label: "Track Record" },
+    { href: "#partners", label: "Partners" },
+  ];
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="/" className="flex items-center">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center"
+        >
           <img src={logo} alt="Dew Point Labs" className="h-10" />
         </a>
         <div className="hidden md:flex items-center gap-8">
-          <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
-          <a href="#track-record" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Track Record</a>
-          <a href="#partners" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Partners</a>
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             href="https://calendly.com"
             target="_blank"
