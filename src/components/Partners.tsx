@@ -85,11 +85,13 @@ const Partners = () => {
                     key={item.name}
                     className="group flex items-center gap-3 rounded-none bg-card/40 border border-border/40 px-6 py-4 hover:border-primary/20 transition-all duration-300"
                   >
-                    <img
-                      src={item.logo}
-                      alt={`${item.name} logo`}
-                      className="w-10 h-10 object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
-                    />
+                    <div className="w-10 h-10 rounded-full bg-muted/30 flex items-center justify-center overflow-hidden shrink-0">
+                      <img
+                        src={item.logo}
+                        alt={`${item.name} logo`}
+                        className="w-8 h-8 object-contain grayscale brightness-150 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
+                      />
+                    </div>
                     <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-heading">
                       {item.name}
                     </span>
