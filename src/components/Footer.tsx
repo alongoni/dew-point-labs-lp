@@ -11,7 +11,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">Built on expertise. Sharpened by AI.</p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground/60">
               <span>Originated from</span>
-              <img src={protofireLogo} alt="Protofire" className="h-4" />
+              <img src={protofireLogo} alt="Protofire" className="h-5" />
               <span>· 2026</span>
             </div>
           </div>
@@ -36,10 +36,11 @@ const Footer = () => {
               Contact
             </a>
             <a
-              href="#"
+              href="https://x.com/DewPointLabs"
+              target="_blank"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
             >
-              Twitter
+              X
             </a>
           </div>
         </div>
