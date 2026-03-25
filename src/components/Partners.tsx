@@ -22,7 +22,7 @@ const categories = [
   {
     title: "Networks",
     items: [
-      { name: "Gnosis", logo: gnosisLogo },
+      { name: "Gnosis", logo: gnosisLogo, noContainer: true },
       { name: "Celo", logo: celoLogo },
       { name: "Rootstock", logo: rootstockLogo },
       { name: "Scroll", logo: scrollLogo },
@@ -38,7 +38,7 @@ const categories = [
       { name: "Safe", logo: safeLogo },
       { name: "Uniswap", logo: uniswapLogo },
       { name: "Blockscout", logo: blockscoutLogo },
-      { name: "Chainlink", logo: chainlinkLogo },
+      { name: "Chainlink", logo: chainlinkLogo, noContainer: true },
       { name: "The Graph", logo: thegraphLogo },
     ],
   },
@@ -85,11 +85,11 @@ const Partners = () => {
                     key={item.name}
                     className="group flex items-center gap-3 rounded-none bg-card/40 border border-border/40 px-6 py-4 hover:border-primary/20 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-full bg-muted/30 flex items-center justify-center overflow-hidden shrink-0">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 ${(item as any).noContainer ? '' : 'bg-muted/30'}`}>
                       <img
                         src={item.logo}
                         alt={`${item.name} logo`}
-                        className="w-10 h-10 object-contain grayscale brightness-150 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300"
+                        className={`object-contain grayscale brightness-150 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:brightness-100 transition-all duration-300 ${(item as any).noContainer ? 'w-12 h-12' : 'w-10 h-10'}`}
                       />
                     </div>
                     <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-heading">
