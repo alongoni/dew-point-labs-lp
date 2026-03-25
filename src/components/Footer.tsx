@@ -8,21 +8,39 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img src={logo} alt="Dew Point Labs" className="h-10 opacity-60" />
-            <p className="text-sm text-muted-foreground">
-              Built on expertise. Sharpened by AI.
-            </p>
+            <p className="text-sm text-muted-foreground">Built on expertise. Sharpened by AI.</p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground/60">
               <span>Originated from</span>
-              <img src={protofireLogo} alt="Protofire" className="h-3.5" />
+              <img src={protofireLogo} alt="Protofire" className="h-4" />
               <span>· 2026</span>
             </div>
           </div>
 
           <div className="flex items-center gap-8">
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">Brand Kit</a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">Media</a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">Contact</a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">Twitter</a>
+            <a
+              href="#"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+            >
+              Brand Kit
+            </a>
+            <a
+              href="#"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+            >
+              Media
+            </a>
+            <a
+              href="#"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+            >
+              Contact
+            </a>
+            <a
+              href="#"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+            >
+              Twitter
+            </a>
           </div>
         </div>
       </div>
