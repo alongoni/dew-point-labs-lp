@@ -33,7 +33,6 @@ const Navbar = () => {
             <img src={logo} alt="Dew Point Labs" className="h-11" />
           </a>
           <div className="hidden sm:flex items-center gap-2.5 text-muted-foreground/50">
-            <div className="h-6 w-px bg-border/50" />
             <span className="text-[12px] uppercase tracking-[0.15em]">Originated from</span>
             <img src={protofireLogo} alt="Protofire" className="h-[20px]" />
           </div>
