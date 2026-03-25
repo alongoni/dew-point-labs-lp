@@ -35,7 +35,7 @@ const TrackRecord = () => {
             >
               <div className="border border-border p-8 text-left h-full flex flex-col justify-between">
                 <p className="text-5xl md:text-6xl font-black mb-4 text-foreground font-heading">{stat.value}</p>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground leading-relaxed font-heading">{stat.label}</p>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground leading-relaxed">{stat.label}</p>
               </div>
             </motion.div>
           ))}
