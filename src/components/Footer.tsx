@@ -18,10 +18,11 @@ const Footer = () => {
 
           <div className="flex items-center gap-8">
             <a
-              href="#"
+              href="https://drive.google.com/drive/folders/1Jk-0dE8DcLSiPTBJ-B2hfqYgvBkcBhAQ?usp=sharing"
+              target="_blank"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
             >
-              Brand Kit
+              Brand Assets
             </a>
             <a
               href="#"
