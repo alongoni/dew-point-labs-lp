@@ -15,7 +15,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground/60">
               <span>Originated from</span>
-              <img src={protofireLogo} alt="Protofire" className="h-8" />
+              <img src={protofireLogo} alt="Protofire" className="h-5" />
               <span>· 2026</span>
             </div>
           </div>
