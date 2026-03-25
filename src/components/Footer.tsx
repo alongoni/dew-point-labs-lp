@@ -7,14 +7,10 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <img src={logo} alt="Dew Point Labs" className="h-10 opacity-60" />
+            <img src={logo} alt="Dew Point Labs" className="h-11 opacity-60" />
             <p className="text-md text-muted-foreground font-heading">Built on expertise. Sharpened by AI.</p>
-            <div className="hidden sm:flex items-center gap-2 text-muted-foreground/70">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground/70">
               <span className="text-[12px] uppercase tracking-[0.15em]">Originated from</span>
-              <img src={protofireLogo} alt="Protofire" className="h-[20px]" />
-            </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground/60">
-              <span>Originated from</span>
               <img src={protofireLogo} alt="Protofire" className="h-5" />
               <span>· 2026</span>
             </div>
