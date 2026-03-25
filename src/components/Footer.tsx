@@ -1,4 +1,5 @@
 import logo from "@/assets/dpl-logo-white.svg";
+import protofireLogo from "@/assets/protofire.svg";
 
 const Footer = () => {
   return (
@@ -10,9 +11,11 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               Built on expertise. Sharpened by AI.
             </p>
-            <p className="text-xs text-muted-foreground/60">
-              Dew Point Labs, originated from Protofire. 2026.
-            </p>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground/60">
+              <span>Originated from</span>
+              <img src={protofireLogo} alt="Protofire" className="h-3.5" />
+              <span>· 2026</span>
+            </div>
           </div>
 
           <div className="flex items-center gap-8">
