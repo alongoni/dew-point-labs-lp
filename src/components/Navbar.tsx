@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <a
             href="#"
             onClick={(e) => {
@@ -32,7 +32,7 @@ const Navbar = () => {
           >
             <img src={logo} alt="Dew Point Labs" className="h-11" />
           </a>
-          <div className="hidden sm:flex items-center gap-2.5 text-muted-foreground/50">
+          <div className="hidden sm:flex items-center gap-2 text-muted-foreground/50">
             <span className="text-[12px] uppercase tracking-[0.15em]">Originated from</span>
             <img src={protofireLogo} alt="Protofire" className="h-[20px]" />
           </div>
