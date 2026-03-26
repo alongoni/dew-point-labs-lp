@@ -43,12 +43,12 @@ const services = [
     title: "Custom Solutions",
     desc: (
       <>
-        Not every infrastructure need fits a standard deployment. We build on top of Safe, Uniswap, Compound, AAVE, and
-        Blockscout to deliver purpose-built solutions: custom frontends, protocol integrations, treasury tooling, and
-        execution layers tailored to the chain's specific requirements.
+        We build on top of Safe, Uniswap, Compound, AAVE, and Blockscout to deliver purpose-built solutions: custom
+        frontends, protocol integrations, treasury tooling, and execution layers tailored to the chain's specific
+        requirements.
       </>
     ),
-    tagline: "The complete multisig setup for any chain, production-ready.",
+    tagline: "For (mostly) every need of your network, protocol, and idea.",
   },
   {
     icon: Landmark,
