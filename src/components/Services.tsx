@@ -62,7 +62,7 @@ const services = [
         </strong>
       </>
     ),
-    tagline: "The complete multisig setup for any chain, production-ready.",
+    tagline: "Supporting your users in operating on your chain.",
   },
   {
     icon: Link,
