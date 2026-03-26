@@ -7,9 +7,8 @@ const services = [
     title: "Safe Wallet Deployment and Hosting",
     desc: (
       <>
-        The <strong>largest official Safe deployer</strong>, with 100+ chains supported. We deploy official contracts,
-        backend infrastructure, and deliver shared or whitelabel UI.{" "}
-        <strong>The complete multisig setup for any chain, production-ready.</strong>
+        <strong>Official Safe deployer</strong>, with 100+ chains supported. We deploy official contracts, backend
+        infrastructure, and deliver shared or whitelabel UI.
       </>
     ),
     tagline: "The complete multisig setup for any chain, production-ready.",
@@ -20,8 +19,7 @@ const services = [
     desc: (
       <>
         A <strong>trusted Uniswap v3 deployer</strong> on 10+ chains. Full pool factory, liquidity infrastructure,
-        canonical status support, as <strong>part of Protofire's shared UI or as a whitelabel solution</strong>. Full
-        deployment and support packages for EVM-based networks.
+        canonical status support, as <strong>part of Protofire's shared UI or as a whitelabel solution</strong>.
       </>
     ),
     tagline: "Full deployment and support packages for EVM-based networks.",
@@ -36,7 +34,6 @@ const services = [
           Contract verification, API configuration, custom frontend and backend features, cost-efficient support for
           high-TPS and hybrid chains.
         </strong>{" "}
-        Essential tooling for users, developers and protocols on your chain.
       </>
     ),
     tagline: "The tooling developers need when building on your chain.",
