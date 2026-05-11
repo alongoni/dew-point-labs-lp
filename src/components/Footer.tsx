@@ -1,7 +1,13 @@
-import logo from "@/assets/dpl-logo-white.svg";
-import protofireLogo from "@/assets/protofire.svg";
+import logoLight from "@/assets/dpl-logo-white.svg";
+import logoDark from "@/assets/dpl-logo-dark.svg";
+import protofireLight from "@/assets/protofire.svg";
+import protofireDark from "@/assets/protofire-dark.svg";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  const logo = theme === "dark" ? logoLight : logoDark;
+  const protofireLogo = theme === "dark" ? protofireLight : protofireDark;
   return (
     <footer className="border-t border-border/40 py-16">
       <div className="container mx-auto px-6">

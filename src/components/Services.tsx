@@ -1,111 +1,65 @@
 import { motion } from "framer-motion";
 import { Shield, Repeat, Search, Wrench, Landmark, Link } from "lucide-react";
+import safeImg from "@/assets/services/safe-wallet.jpg";
+import dexImg from "@/assets/services/dex.jpg";
+import explorerImg from "@/assets/services/explorer.jpg";
+import customImg from "@/assets/services/custom.jpg";
+import lendingImg from "@/assets/services/lending.jpg";
+import treasuryImg from "@/assets/services/treasury.jpg";
 
 const services = [
   {
     icon: Shield,
-    title: "Safe Wallet Deployment and Hosting",
-    desc: (
-      <>
-        <strong>Official Safe deployer</strong>, with 100+ chains supported. We deploy official contracts, backend
-        infrastructure, and deliver shared or whitelabel UI.
-      </>
-    ),
+    title: "Safe Wallet Deployment & Hosting",
+    image: safeImg,
+    desc: "Official Safe deployer, with 100+ chains supported. Contracts, backend infrastructure, and shared or whitelabel UI.",
     tagline: "The complete multisig setup for any chain, production-ready.",
   },
   {
     icon: Repeat,
-    title: "DEX Deployment and Support",
-    desc: (
-      <>
-        A <strong>trusted Uniswap v3 deployer</strong> on 10+ chains. Full pool factory, liquidity infrastructure,
-        canonical status support, as <strong>part of Protofire's shared UI or as a whitelabel solution</strong>.
-      </>
-    ),
+    title: "DEX Deployment & Support",
+    image: dexImg,
+    desc: "A trusted Uniswap v3 deployer on 10+ chains. Pool factory, liquidity infrastructure, canonical status support.",
     tagline: "Full deployment and support packages for EVM-based networks.",
   },
   {
     icon: Search,
-    title: "Block Explorer Deployment, Support and Deep Customization",
-    desc: (
-      <>
-        Made with Blockscout.{" "}
-        <strong>
-          Contract verification, API configuration, custom frontend and backend features, cost-efficient support for
-          high-TPS and hybrid chains.
-        </strong>{" "}
-      </>
-    ),
+    title: "Block Explorer & Customization",
+    image: explorerImg,
+    desc: "Made with Blockscout. Contract verification, API configuration, custom frontend & backend, support for high-TPS chains.",
     tagline: "The tooling developers need when building on your chain.",
   },
   {
     icon: Wrench,
     title: "Custom Solutions",
-    desc: (
-      <>
-        We build on top of Safe, Uniswap, Compound, AAVE, and Blockscout to deliver purpose-built solutions: custom
-        frontends, protocol integrations, treasury tooling, and execution layers tailored to the chain's specific
-        requirements.
-      </>
-    ),
+    image: customImg,
+    desc: "We build on top of Safe, Uniswap, Compound, AAVE, and Blockscout — custom frontends, treasury tooling, execution layers.",
     tagline: "For (mostly) every need of your network, protocol, and idea.",
   },
   {
     icon: Landmark,
-    title: "Lending Deployment, Management and Support",
-    desc: (
-      <>
-        <strong>Based on Compound and AAVE solutions</strong>, we enable permissionless borrowing and lending with high
-        capital efficiency.{" "}
-        <strong>
-          Support for dynamic interest rate models, overcollateralized positions, and seamless liquidity provisioning.
-        </strong>
-      </>
-    ),
+    title: "Lending Deployment & Support",
+    image: lendingImg,
+    desc: "Based on Compound and AAVE. Permissionless borrowing & lending with dynamic interest rates and overcollateralized positions.",
     tagline: "Supporting your users in operating on your chain.",
   },
   {
     icon: Link,
     title: "On-Chain Financial Infrastructure",
-    desc: (
-      <>
-        On-chain treasury infrastructure built on Safe, with native support for card integration.{" "}
-        <strong>
-          Covers multi-sig treasury setup, on-chain spending controls, and operational payouts through card solutions.
-        </strong>
-      </>
-    ),
+    image: treasuryImg,
+    desc: "On-chain treasury infrastructure built on Safe with native card integration, spending controls and operational payouts.",
     tagline: "All the needs for your on-chain treasury.",
   },
 ];
 
-const ServiceCard = ({
-  service,
-  i,
-  className = "",
-}: {
-  service: (typeof services)[0];
-  i: number;
-  className?: string;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4, delay: i * 0.08 }}
-    className={`group relative rounded-none bg-card/50 border border-border/50 p-8 hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col ${className}`}
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative z-10 flex flex-col gap-4 h-full">
-      <div className="flex items-center gap-3">
-        <service.icon className="h-5 w-5 text-primary/70 shrink-0" strokeWidth={1.5} />
-        <h3 className="text-lg font-bold">{service.title}</h3>
-      </div>
-      <p className="text-muted-foreground leading-relaxed flex-1">{service.desc}</p>
-      {service.tagline && <p className="text-sm text-foreground mt-1 font-medium">{service.tagline}</p>}
-    </div>
-  </motion.div>
-);
+const cardSpans = [
+  "md:col-span-7 md:row-span-2",
+  "md:col-span-5",
+  "md:col-span-5",
+  "md:col-span-5",
+  "md:col-span-7 md:row-span-2",
+  "md:col-span-5",
+];
 
 const Services = () => {
   return (
@@ -116,7 +70,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-16 max-w-3xl"
         >
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4">What we do</p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight">
@@ -124,17 +78,38 @@ const Services = () => {
           </h2>
         </motion.div>
 
-        {/* Row 1: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          {services.slice(0, 3).map((service, i) => (
-            <ServiceCard key={service.title} service={service} i={i} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 md:auto-rows-[260px] gap-4">
+          {services.map((s, i) => (
+            <motion.article
+              key={s.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4 }}
+              className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-[0_24px_60px_-24px_hsl(var(--primary)/0.35)] ${cardSpans[i]}`}
+            >
+              <div className="absolute inset-0">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover opacity-70 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06] group-hover:opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/10" />
+              </div>
 
-        {/* Row 2: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          {services.slice(3, 6).map((service, i) => (
-            <ServiceCard key={service.title} service={service} i={i + 3} />
+              <div className="relative z-10 flex h-full flex-col justify-end gap-3 p-6 md:p-7">
+                <div className="flex items-center gap-2.5">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border/70 bg-background/70 backdrop-blur">
+                    <s.icon className="h-4 w-4 text-primary" strokeWidth={1.75} />
+                  </span>
+                  <h3 className="text-base md:text-lg font-bold leading-tight">{s.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{s.desc}</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-foreground/80 font-medium">{s.tagline}</p>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

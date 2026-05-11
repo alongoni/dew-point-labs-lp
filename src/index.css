@@ -6,6 +6,53 @@
 
 @layer base {
   :root {
+    /* Light theme (default) */
+    --background: 36 22% 96%;
+    --foreground: 240 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 14% 10%;
+
+    --primary: 18 88% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 30% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 36 14% 90%;
+    --muted-foreground: 240 6% 38%;
+
+    --accent: 245 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 86%;
+    --input: 240 8% 86%;
+    --ring: 18 88% 52%;
+
+    --radius: 0.75rem;
+
+    --gradient-orange: 18 88% 52%;
+    --gradient-red: 5 70% 50%;
+    --gradient-purple: 270 40% 42%;
+    --gradient-blue: 245 64% 50%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 14% 10%;
+    --sidebar-primary: 18 88% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 36 14% 90%;
+    --sidebar-accent-foreground: 240 14% 10%;
+    --sidebar-border: 240 8% 86%;
+    --sidebar-ring: 18 88% 52%;
+  }
+
+  .dark {
     --background: 240 12% 5%;
     --foreground: 0 0% 95%;
 
@@ -33,8 +80,6 @@
     --border: 240 8% 16%;
     --input: 240 8% 16%;
     --ring: 25 92% 65%;
-
-    --radius: 0.75rem;
 
     --gradient-orange: 25 92% 65%;
     --gradient-red: 5 50% 53%;
@@ -112,5 +157,29 @@
 
   .section-gradient {
     background: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--gradient-purple) / 0.08), transparent);
+  }
+
+  /* Grayscale noisy hero background — adapts to light / dark */
+  .hero-noise-bg {
+    position: relative;
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(ellipse 70% 60% at 20% 10%, hsl(var(--foreground) / 0.06), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 30%, hsl(var(--foreground) / 0.05), transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--foreground) / 0.07), transparent 60%);
+  }
+  .hero-noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .dark .hero-noise-bg::before {
+    opacity: 0.22;
+    mix-blend-mode: screen;
   }
 }
