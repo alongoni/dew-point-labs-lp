@@ -21,11 +21,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute top-1/4 -left-1/4 h-[600px] w-[600px] rounded-full bg-primary/10 blur-[120px]" />
-        <div className="absolute top-1/3 right-0 h-[500px] w-[500px] rounded-full bg-secondary/20 blur-[120px]" />
-        <div className="absolute bottom-0 left-1/3 h-[600px] w-[600px] rounded-full bg-accent/20 blur-[120px]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-noise-bg">
+      <div className="absolute inset-0 overflow-hidden grayscale opacity-60" aria-hidden="true">
+        <div className="absolute top-1/4 -left-1/4 h-[600px] w-[600px] rounded-full bg-foreground/5 blur-[120px]" />
+        <div className="absolute top-1/3 right-0 h-[500px] w-[500px] rounded-full bg-foreground/10 blur-[120px]" />
+        <div className="absolute bottom-0 left-1/3 h-[600px] w-[600px] rounded-full bg-foreground/5 blur-[120px]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-6 pb-20 pt-24">
@@ -41,7 +41,7 @@ const Hero = () => {
 
           <div className="mb-12 flex h-20 items-left justify-start">
             <div className="text-center">
-              <p className="text-5xl mb-4 text-white tabular-nums text-left font-heading font-bold md:text-6xl">
+              <p className="text-5xl mb-4 text-foreground tabular-nums text-left font-heading font-bold md:text-6xl">
                 {metrics[activeMetric].value}
               </p>
               <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
