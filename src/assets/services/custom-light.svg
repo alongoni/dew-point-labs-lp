@@ -1,0 +1,51 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Custom Solutions</title>
+  <desc>Network graph connecting Safe, Uniswap, AAVE, and Blockscout nodes representing custom Web3 solutions</desc>
+
+  <rect width="400" height="260" fill="#f2f0ed" rx="12"/>
+
+  <!-- subtle grid -->
+  <line x1="200" y1="0" x2="200" y2="260" stroke="#dedad6" stroke-width="0.75"/>
+  <line x1="0" y1="130" x2="400" y2="130" stroke="#dedad6" stroke-width="0.75"/>
+
+  <!-- edges -->
+  <line x1="115" y1="75" x2="183" y2="118" stroke="#c03030" stroke-width="1" opacity="0.3"/>
+  <line x1="285" y1="75" x2="217" y2="118" stroke="#c03030" stroke-width="1" opacity="0.3"/>
+  <line x1="65" y1="160" x2="178" y2="138" stroke="#c03030" stroke-width="1" opacity="0.2"/>
+  <line x1="335" y1="160" x2="222" y2="138" stroke="#c03030" stroke-width="1" opacity="0.2"/>
+  <line x1="200" y1="155" x2="200" y2="210" stroke="#c03030" stroke-width="1" opacity="0.18"/>
+  <line x1="200" y1="108" x2="200" y2="50" stroke="#c03030" stroke-width="1" opacity="0.15"/>
+
+  <!-- dot ring -->
+  <circle cx="200" cy="130" r="58" fill="none" stroke="#c03030" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.2"/>
+
+  <!-- outer nodes -->
+  <circle cx="105" cy="65" r="28" fill="#fce8e8" stroke="#c03030" stroke-width="1.25"/>
+  <text x="105" y="61" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" opacity="0.7">🔐</text>
+  <text x="105" y="76" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" font-weight="700">Safe</text>
+
+  <circle cx="295" cy="65" r="28" fill="#fce8e8" stroke="#c03030" stroke-width="1.25"/>
+  <text x="295" y="61" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" opacity="0.7">🦄</text>
+  <text x="295" y="76" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" font-weight="700">Uniswap</text>
+
+  <circle cx="50" cy="163" r="24" fill="#fce8e8" stroke="#c03030" stroke-width="1" opacity="0.7"/>
+  <text x="50" y="167" text-anchor="middle" font-family="monospace" font-size="8" fill="#902020" opacity="0.7">BSC</text>
+
+  <circle cx="350" cy="163" r="24" fill="#fce8e8" stroke="#c03030" stroke-width="1" opacity="0.7"/>
+  <text x="350" y="167" text-anchor="middle" font-family="monospace" font-size="8" fill="#902020" opacity="0.7">AAVE</text>
+
+  <circle cx="200" cy="225" r="22" fill="#fce8e8" stroke="#c03030" stroke-width="1" opacity="0.5"/>
+  <text x="200" y="229" text-anchor="middle" font-family="monospace" font-size="8" fill="#902020" opacity="0.5">custom</text>
+
+  <!-- center HUB -->
+  <circle cx="200" cy="130" r="32" fill="#f5d0d0" stroke="#c03030" stroke-width="2"/>
+  <circle cx="200" cy="130" r="24" fill="#fce8e8" stroke="#c03030" stroke-width="0.75" opacity="0.5"/>
+  <text x="200" y="126" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" opacity="0.6">DPL</text>
+  <text x="200" y="140" text-anchor="middle" font-family="monospace" font-size="9" fill="#902020" font-weight="700">core</text>
+
+  <!-- decorative dots -->
+  <circle cx="130" cy="42" r="3" fill="#c03030" opacity="0.15"/>
+  <circle cx="270" cy="42" r="3" fill="#c03030" opacity="0.15"/>
+  <circle cx="380" cy="100" r="3" fill="#c03030" opacity="0.12"/>
+  <circle cx="20" cy="100" r="3" fill="#c03030" opacity="0.12"/>
+</svg>
