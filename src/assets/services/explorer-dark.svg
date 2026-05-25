@@ -1,71 +1,55 @@
 <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">
-  <title>Block Explorer and Customization</title>
-  <desc>Chain of blocks with search interface representing Blockscout explorer deployment</desc>
-
-  <rect width="400" height="260" fill="#111111" rx="12"/>
-
-  <!-- subtle grid -->
-  <line x1="0" y1="65" x2="400" y2="65" stroke="#1a1a1a" stroke-width="0.75"/>
-  <line x1="0" y1="195" x2="400" y2="195" stroke="#1a1a1a" stroke-width="0.75"/>
-
-  <!-- search bar -->
-  <rect x="30" y="28" width="340" height="32" rx="6" fill="#181818" stroke="#2a3a4a" stroke-width="1"/>
-  <text x="56" y="49" font-family="monospace" font-size="11" fill="#3a5a7a">0x13f4a2c8...35cc</text>
-  <!-- magnifier -->
-  <circle cx="46" cy="44" r="6" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
-  <line x1="50" y1="49" x2="55" y2="54" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- kbd hint -->
-  <rect x="348" y="36" width="16" height="16" rx="3" fill="#1e1e1e" stroke="#333" stroke-width="0.75"/>
-  <text x="356" y="48" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">/</text>
-
-  <!-- blockchain row -->
-  <!-- block 1 -->
-  <rect x="20" y="90" width="78" height="72" rx="6" fill="#181e2a" stroke="#4a9eff" stroke-width="1"/>
-  <text x="59" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a9eff" opacity="0.6">#25079</text>
-  <text x="59" y="130" text-anchor="middle" font-family="monospace" font-size="11" fill="#4a9eff" font-weight="700">12 tx</text>
-  <text x="59" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="#2a4a6a">2h ago</text>
-
-  <!-- connector -->
-  <line x1="98" y1="126" x2="112" y2="126" stroke="#4a9eff" stroke-width="2"/>
-  <polygon points="112,122 120,126 112,130" fill="#4a9eff"/>
-
-  <!-- block 2 -->
-  <rect x="120" y="90" width="78" height="72" rx="6" fill="#181e2a" stroke="#4a9eff" stroke-width="1"/>
-  <text x="159" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a9eff" opacity="0.6">#25080</text>
-  <text x="159" y="130" text-anchor="middle" font-family="monospace" font-size="11" fill="#4a9eff" font-weight="700">8 tx</text>
-  <text x="159" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="#2a4a6a">2h ago</text>
-
-  <!-- connector -->
-  <line x1="198" y1="126" x2="212" y2="126" stroke="#4a9eff" stroke-width="2"/>
-  <polygon points="212,122 220,126 212,130" fill="#4a9eff"/>
-
-  <!-- block 3 — highlighted/latest -->
-  <rect x="220" y="82" width="86" height="88" rx="6" fill="#0d1e35" stroke="#4a9eff" stroke-width="2"/>
-  <rect x="222" y="84" width="82" height="22" rx="4" fill="#4a9eff" opacity="0.15"/>
-  <text x="263" y="100" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a9eff">LATEST</text>
-  <text x="263" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a9eff" opacity="0.7">#25081</text>
-  <text x="263" y="136" text-anchor="middle" font-family="monospace" font-size="13" fill="#4a9eff" font-weight="700">46 tx</text>
-  <text x="263" y="154" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a9eff" opacity="0.5">scanning...</text>
-
-  <!-- connector dashed - pending -->
-  <line x1="306" y1="126" x2="320" y2="126" stroke="#2a3a4a" stroke-width="1.5" stroke-dasharray="3,3"/>
-
-  <!-- block 4 — future/pending -->
-  <rect x="320" y="90" width="60" height="72" rx="6" fill="#141414" stroke="#1e2e3e" stroke-width="1"/>
-  <text x="350" y="122" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e2e3e">· · ·</text>
-
-  <!-- tx rows at bottom -->
-  <rect x="30" y="196" width="200" height="7" rx="3" fill="#1e2e3e"/>
-  <rect x="30" y="210" width="280" height="7" rx="3" fill="#1a2a3a"/>
-  <rect x="30" y="224" width="150" height="7" rx="3" fill="#162030"/>
-  <!-- tx value dots -->
-  <circle cx="244" cy="200" r="4" fill="#4a9eff" opacity="0.5"/>
-  <circle cx="324" cy="214" r="4" fill="#4a9eff" opacity="0.3"/>
-  <circle cx="194" cy="228" r="4" fill="#4a9eff" opacity="0.2"/>
-  <!-- contract call badge -->
-  <rect x="254" y="192" width="80" height="15" rx="3" fill="#0d1e35" stroke="#4a9eff" stroke-width="0.5"/>
-  <text x="294" y="203" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a9eff">contract call</text>
-  <!-- transfer badge -->
-  <rect x="334" y="207" width="56" height="15" rx="3" fill="#0d1e35" stroke="#4a9eff" stroke-width="0.5"/>
-  <text x="362" y="218" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a9eff">transfer</text>
+  <title>Explorer</title>
+  <desc>Chain of blocks with a search bar</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/><stop offset="100%" stop-color="#1a1620"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f56a2c"/><stop offset="35%" stop-color="#d94d4d"/>
+      <stop offset="70%" stop-color="#8a5cd1"/><stop offset="100%" stop-color="#4f6bff"/>
+    </linearGradient>
+    <linearGradient id="gFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f56a2c" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#4f6bff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)" rx="12"/>
+  <rect x="30" y="28" width="340" height="32" rx="16" fill="none" stroke="url(#g)" stroke-width="1"/>
+  <text x="58" y="49" font-family="monospace" font-size="11" fill="#cfd2dc" opacity="0.8">0x13f4a2c8...35cc</text>
+  <circle cx="46" cy="44" r="6" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+  <line x1="50" y1="49" x2="55" y2="54" stroke="url(#g)" stroke-width="1.5" stroke-linecap="round"/>
+  <g>
+    <rect x="20" y="90" width="78" height="72" rx="8" fill="url(#gFill)" stroke="url(#g)" stroke-width="1"/>
+    <text x="59" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#cfd2dc" opacity="0.65">#25079</text>
+    <text x="59" y="132" text-anchor="middle" font-family="monospace" font-size="12" fill="#f0eef5" font-weight="700">12 tx</text>
+    <text x="59" y="150" text-anchor="middle" font-family="monospace" font-size="8" fill="#9095a8">2h ago</text>
+  </g>
+  <line x1="98" y1="126" x2="118" y2="126" stroke="url(#g)" stroke-width="2"/>
+  <polygon points="118,122 126,126 118,130" fill="url(#g)"/>
+  <g>
+    <rect x="126" y="90" width="78" height="72" rx="8" fill="url(#gFill)" stroke="url(#g)" stroke-width="1"/>
+    <text x="165" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#cfd2dc" opacity="0.65">#25080</text>
+    <text x="165" y="132" text-anchor="middle" font-family="monospace" font-size="12" fill="#f0eef5" font-weight="700">8 tx</text>
+    <text x="165" y="150" text-anchor="middle" font-family="monospace" font-size="8" fill="#9095a8">2h ago</text>
+  </g>
+  <line x1="204" y1="126" x2="224" y2="126" stroke="url(#g)" stroke-width="2"/>
+  <polygon points="224,122 232,126 224,130" fill="url(#g)"/>
+  <g>
+    <rect x="232" y="82" width="86" height="88" rx="8" fill="url(#gFill)" stroke="url(#g)" stroke-width="1.75"/>
+    <text x="275" y="100" text-anchor="middle" font-family="monospace" font-size="8" fill="#f0eef5" font-weight="700">LATEST</text>
+    <text x="275" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#cfd2dc" opacity="0.7">#25081</text>
+    <text x="275" y="138" text-anchor="middle" font-family="monospace" font-size="14" fill="#f0eef5" font-weight="700">46 tx</text>
+    <text x="275" y="156" text-anchor="middle" font-family="monospace" font-size="8" fill="#cfd2dc" opacity="0.6">scanning...</text>
+  </g>
+  <line x1="318" y1="126" x2="338" y2="126" stroke="url(#g)" stroke-width="1.25" stroke-dasharray="3,3" opacity="0.6"/>
+  <rect x="338" y="98" width="44" height="56" rx="6" fill="none" stroke="url(#g)" stroke-width="0.75" opacity="0.4"/>
+  <text x="360" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#cfd2dc" opacity="0.4">···</text>
+  <rect x="30" y="196" width="200" height="7" rx="3" fill="url(#g)" opacity="0.35"/>
+  <rect x="30" y="210" width="280" height="7" rx="3" fill="url(#g)" opacity="0.22"/>
+  <rect x="30" y="224" width="150" height="7" rx="3" fill="url(#g)" opacity="0.15"/>
+  <rect x="254" y="192" width="80" height="15" rx="7" fill="none" stroke="url(#g)" stroke-width="0.75"/>
+  <text x="294" y="203" text-anchor="middle" font-family="monospace" font-size="8" fill="#cfd2dc">contract call</text>
+  <rect x="338" y="207" width="52" height="15" rx="7" fill="none" stroke="url(#g)" stroke-width="0.75"/>
+  <text x="364" y="218" text-anchor="middle" font-family="monospace" font-size="8" fill="#cfd2dc">transfer</text>
 </svg>

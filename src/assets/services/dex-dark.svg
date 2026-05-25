@@ -1,49 +1,38 @@
 <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">
-  <title>DEX Deployment and Support</title>
-  <desc>Liquidity curve visualization representing DEX deployment across multiple chains</desc>
-
-  <rect width="400" height="260" fill="#111111" rx="12"/>
-
-  <!-- grid -->
-  <line x1="50" y1="30" x2="50" y2="220" stroke="#1e1e1e" stroke-width="0.75"/>
-  <line x1="50" y1="220" x2="370" y2="220" stroke="#1e1e1e" stroke-width="0.75"/>
-  <line x1="50" y1="160" x2="370" y2="160" stroke="#1e1e1e" stroke-width="0.5" stroke-dasharray="3,4"/>
-  <line x1="50" y1="100" x2="370" y2="100" stroke="#1e1e1e" stroke-width="0.5" stroke-dasharray="3,4"/>
-  <line x1="160" y1="30" x2="160" y2="220" stroke="#1e1e1e" stroke-width="0.5" stroke-dasharray="3,4"/>
-  <line x1="270" y1="30" x2="270" y2="220" stroke="#1e1e1e" stroke-width="0.5" stroke-dasharray="3,4"/>
-
-  <!-- liquidity fill -->
-  <path d="M50,220 C80,218 120,210 160,160 C200,110 220,72 250,60 C280,48 320,48 370,48 L370,220 Z" fill="#2dd4a0" opacity="0.08"/>
-  <!-- liquidity curve -->
-  <path d="M50,220 C80,218 120,210 160,160 C200,110 220,72 250,60 C280,48 320,48 370,48" fill="none" stroke="#2dd4a0" stroke-width="2"/>
-
-  <!-- optimal utilization vertical -->
-  <line x1="250" y1="60" x2="250" y2="220" stroke="#2dd4a0" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <circle cx="250" cy="60" r="5" fill="#2dd4a0"/>
-  <rect x="256" y="50" width="62" height="18" rx="3" fill="#0f2a20"/>
-  <text x="287" y="63" text-anchor="middle" font-family="monospace" font-size="9" fill="#2dd4a0">optimal util.</text>
-
-  <!-- token swap UI -->
-  <rect x="50" y="28" width="70" height="28" rx="5" fill="#0f2a20" stroke="#2dd4a0" stroke-width="1"/>
-  <text x="85" y="43" text-anchor="middle" font-family="monospace" font-size="11" fill="#2dd4a0" font-weight="700">ETH</text>
-
-  <!-- arrow -->
-  <path d="M126,42 L148,42" fill="none" stroke="#2dd4a0" stroke-width="1.5"/>
-  <polygon points="148,38 156,42 148,46" fill="#2dd4a0"/>
-
-  <rect x="158" y="28" width="80" height="28" rx="5" fill="#0f2a20" stroke="#2dd4a0" stroke-width="1"/>
-  <text x="198" y="43" text-anchor="middle" font-family="monospace" font-size="11" fill="#2dd4a0" font-weight="700">USDC</text>
-
-  <!-- chain count -->
-  <text x="368" y="40" text-anchor="end" font-family="monospace" font-size="9" fill="#2dd4a0" opacity="0.5">10+ chains</text>
-
-  <!-- axis labels -->
-  <text x="200" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#444">utilization %</text>
-  <text x="32" y="135" text-anchor="middle" font-family="monospace" font-size="9" fill="#444" transform="rotate(-90,32,135)">APR %</text>
-
-  <!-- tick marks -->
-  <line x1="47" y1="160" x2="53" y2="160" stroke="#333" stroke-width="1"/>
-  <line x1="47" y1="100" x2="53" y2="100" stroke="#333" stroke-width="1"/>
-  <line x1="160" y1="217" x2="160" y2="223" stroke="#333" stroke-width="1"/>
-  <line x1="270" y1="217" x2="270" y2="223" stroke="#333" stroke-width="1"/>
+  <title>DEX</title>
+  <desc>Liquidity curve across multiple chains</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/><stop offset="100%" stop-color="#1a1620"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f56a2c"/><stop offset="35%" stop-color="#d94d4d"/>
+      <stop offset="70%" stop-color="#8a5cd1"/><stop offset="100%" stop-color="#4f6bff"/>
+    </linearGradient>
+    <linearGradient id="gFill" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f56a2c" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4f6bff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)" rx="12"/>
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.75">
+    <line x1="50" y1="30" x2="50" y2="220"/><line x1="50" y1="220" x2="370" y2="220"/>
+    <line x1="50" y1="160" x2="370" y2="160" stroke-dasharray="3,4"/>
+    <line x1="50" y1="100" x2="370" y2="100" stroke-dasharray="3,4"/>
+    <line x1="160" y1="30" x2="160" y2="220" stroke-dasharray="3,4"/>
+    <line x1="270" y1="30" x2="270" y2="220" stroke-dasharray="3,4"/>
+  </g>
+  <path d="M50,220 C80,218 120,210 160,160 C200,110 220,72 250,60 C280,48 320,48 370,48 L370,220 Z" fill="url(#gFill)"/>
+  <path d="M50,220 C80,218 120,210 160,160 C200,110 220,72 250,60 C280,48 320,48 370,48" fill="none" stroke="url(#g)" stroke-width="2"/>
+  <line x1="250" y1="60" x2="250" y2="220" stroke="url(#g)" stroke-width="1" stroke-dasharray="4,3" opacity="0.55"/>
+  <circle cx="250" cy="60" r="5" fill="url(#g)"/>
+  <rect x="256" y="50" width="72" height="18" rx="9" fill="none" stroke="url(#g)" stroke-width="0.75" opacity="0.7"/>
+  <text x="292" y="63" text-anchor="middle" font-family="monospace" font-size="9" fill="#cfd2dc">optimal util.</text>
+  <rect x="50" y="28" width="70" height="28" rx="6" fill="none" stroke="url(#g)" stroke-width="1.25"/>
+  <text x="85" y="46" text-anchor="middle" font-family="monospace" font-size="11" fill="#f0eef5" font-weight="700">ETH</text>
+  <path d="M126,42 L148,42" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+  <polygon points="148,38 156,42 148,46" fill="url(#g)"/>
+  <rect x="158" y="28" width="80" height="28" rx="6" fill="none" stroke="url(#g)" stroke-width="1.25"/>
+  <text x="198" y="46" text-anchor="middle" font-family="monospace" font-size="11" fill="#f0eef5" font-weight="700">USDC</text>
+  <text x="368" y="40" text-anchor="end" font-family="monospace" font-size="9" fill="#9095a8">10+ chains</text>
 </svg>

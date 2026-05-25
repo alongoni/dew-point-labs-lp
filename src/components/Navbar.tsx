@@ -1,4 +1,3 @@
-import { Moon, Sun } from "lucide-react";
 import logoLight from "@/assets/dpl-logo-white.svg";
 import logoDark from "@/assets/dpl-logo-dark.svg";
 import protofireLight from "@/assets/protofire.svg";
@@ -6,7 +5,7 @@ import protofireDark from "@/assets/protofire-dark.svg";
 import { useTheme } from "@/components/ThemeProvider";
 
 const Navbar = () => {
-  const { theme, toggle } = useTheme();
+  const { theme } = useTheme();
   const logo = theme === "dark" ? logoLight : logoDark;
   const protofireLogo = theme === "dark" ? protofireLight : protofireDark;
 
@@ -64,13 +63,6 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <button
-            onClick={toggle}
-            aria-label="Toggle theme"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-          >
-            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </button>
         </div>
       </div>
     </nav>
