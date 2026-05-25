@@ -15,12 +15,18 @@ const Index = () => {
       <Navbar />
       <Hero />
       <PartnersMarquee />
-      <Services />
+      <div className="dark bg-background text-foreground">
+        <Services />
+      </div>
       <TrackRecord />
-      <Partners />
+      <div className="dark bg-background text-foreground">
+        <Partners />
+      </div>
       <Testimonials />
-      <CtaSection />
-      <Footer />
+      <div className="dark bg-background text-foreground">
+        <CtaSection />
+        <Footer />
+      </div>
       <ScrollToTop />
     </div>
   );
