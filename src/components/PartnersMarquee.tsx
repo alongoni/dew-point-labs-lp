@@ -33,6 +33,12 @@ const logos = [
   { name: "Lisk", logo: liskLogo },
 ];
 
+const featured = [
+  { name: "Safe Wallet", logo: safeLogo, url: "https://safe.global/" },
+  { name: "Uniswap", logo: uniswapLogo, url: "https://app.uniswap.org/" },
+  { name: "Blockscout", logo: blockscoutLogo, url: "https://www.blockscout.com/" },
+];
+
 const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolean }) => (
   <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
     <motion.div
@@ -43,17 +49,15 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
       {[...logos, ...logos].map((p, i) => (
         <div
           key={`${p.name}-${i}`}
-          className="group flex items-center gap-3 shrink-0"
+          className="flex items-center gap-3 shrink-0 px-4"
           title={p.name}
         >
-          <div className="h-16 w-16 rounded-full border border-border/60 bg-card/60 backdrop-blur flex items-center justify-center transition-all duration-300 group-hover:border-primary/40 group-hover:scale-105">
-            <img
-              src={p.logo}
-              alt={`${p.name} logo`}
-              className="h-9 w-9 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-            />
-          </div>
-          <span className="text-sm font-heading text-muted-foreground group-hover:text-foreground transition-colors pr-3">
+          <img
+            src={p.logo}
+            alt={`${p.name} logo`}
+            className="h-14 w-14 object-contain"
+          />
+          <span className="text-base font-heading text-foreground/80">
             {p.name}
           </span>
         </div>
@@ -65,9 +69,23 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
 const PartnersMarquee = () => {
   return (
     <section aria-label="Partners" className="relative py-20 border-y border-border/40 bg-muted/30">
+      <div className="container mx-auto px-6 mb-16">
+        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 text-center">Partners</p>
+        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
+          {featured.map((p) => (
+            <img
+              key={p.name}
+              src={p.logo}
+              alt={`${p.name} logo`}
+              className="h-16 md:h-20 w-auto object-contain"
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="container mx-auto px-6 mb-10 flex items-end justify-between gap-6">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Working alongside</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">We built on</p>
           <h2 className="text-2xl md:text-3xl font-black tracking-tight">
             An <span className="gradient-text">open ecosystem</span> of builders
           </h2>
