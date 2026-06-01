@@ -83,7 +83,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm transition-colors duration-500 hover:border-primary/40"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm"
             >
               <div className="px-6 pt-6 pb-3">
                 <h3 className="text-2xl md:text-3xl font-black tracking-tight gradient-text leading-none">
@@ -91,14 +91,11 @@ const Services = () => {
                 </h3>
               </div>
               <div className="relative aspect-[400/220] overflow-hidden border-y border-border/60 bg-muted/30">
-                <motion.img
+                <img
                   src={s.image}
                   alt={s.title}
                   loading="lazy"
                   className="h-full w-full object-cover"
-                  initial={{ scale: 1, y: 0 }}
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 />
               </div>
 
