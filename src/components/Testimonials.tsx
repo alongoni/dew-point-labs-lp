@@ -10,6 +10,7 @@ const testimonials: {
   org: string;
   handle: string;
   url: string;
+  avatar: string;
 }[] = [
   {
     service: "Multisig",
@@ -23,6 +24,7 @@ const testimonials: {
     org: "L2 Network",
     handle: "@l2network",
     url: "https://x.com/",
+    avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
     service: "DEX",
@@ -35,6 +37,7 @@ const testimonials: {
     org: "L1 Foundation",
     handle: "@l1foundation",
     url: "https://x.com/",
+    avatar: "https://i.pravatar.cc/100?img=33",
   },
   {
     service: "Explorer",
@@ -47,6 +50,7 @@ const testimonials: {
     org: "Protocol / DAO",
     handle: "@protocol",
     url: "https://x.com/",
+    avatar: "https://i.pravatar.cc/100?img=58",
   },
 ];
 
@@ -94,15 +98,12 @@ const Testimonials = () => {
                   &rdquo;
                 </p>
                 <div className="border-t border-border/50 pt-4 mt-auto flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center shrink-0 overflow-hidden border border-border/60">
-                    <span className="text-sm font-bold text-foreground">
-                      {t.author
-                        .split(" ")
-                        .map((w) => w[0])
-                        .slice(0, 2)
-                        .join("")}
-                    </span>
-                  </div>
+                  <img
+                    src={t.avatar}
+                    alt={`${t.author} avatar`}
+                    className="h-10 w-10 rounded-full shrink-0 object-cover border border-border/60"
+                    loading="lazy"
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold uppercase tracking-widest text-foreground truncate">{t.author}</p>
                     <p className="text-xs text-muted-foreground truncate">[{t.org}]</p>

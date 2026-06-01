@@ -70,7 +70,9 @@ const PartnersMarquee = () => {
   return (
     <section aria-label="Partners" className="relative py-20 border-y border-border/40 bg-muted/30">
       <div className="container mx-auto px-6 mb-16">
-        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 text-center">Partners</p>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-12 text-center">
+          <span className="gradient-text">Partners</span>
+        </h2>
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           {featured.map((p) => (
             <img
