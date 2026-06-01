@@ -26,9 +26,9 @@ const CtaSection = () => {
               needs to work, let's talk.
             </p>
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="lg" className="text-base px-8 py-6 rounded-full">
+              <Button variant="hero" size="lg" className="text-lg md:text-xl px-12 py-8 rounded-full h-auto">
                 Start building
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </a>
           </div>
