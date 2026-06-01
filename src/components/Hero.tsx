@@ -1,25 +1,14 @@
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const metrics = [
-  { value: "100+", label: "Safe deployments" },
-  { value: "10+", label: "Uniswap v3 chains" },
-  { value: "20+", label: "Ecosystem partners" },
-  { value: "8+", label: "Years in production" },
+const stats = [
+  { value: "100+", label: "Chains with Safe deployed and maintained" },
+  { value: "10+", label: "Chains with Uniswap v3 official deployments" },
+  { value: "8+", label: "Years shipping infrastructure at Protofire" },
+  { value: "$2.35B+", label: "Cumulative TVL across deployed infrastructure" },
 ];
 
 const Hero = () => {
-  const [activeMetric, setActiveMetric] = useState(0);
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveMetric((prev) => (prev + 1) % metrics.length);
-    }, 3000);
-
-    return () => window.clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-noise-bg">
       <div className="absolute inset-0 overflow-hidden grayscale opacity-60" aria-hidden="true">
@@ -29,33 +18,42 @@ const Hero = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6 pb-20 pt-24">
-        <div className="max-w-4xl text-left">
-          <h1 className="mb-8 text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
-            Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
-          </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 text-left">
+            <h1 className="mb-8 text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
+            </h1>
 
-          <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
-            We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs. Safe Wallet and Uniswap v3
-            deployments across 110+ chains, with AI-assisted workflows that improve delivery speed and accuracy.
-          </p>
+            <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
+              We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs. Safe Wallet and Uniswap v3
+              deployments across 110+ chains, with AI-assisted workflows that improve delivery speed and accuracy.
+            </p>
 
-          <div className="mb-12 flex h-20 items-left justify-start">
-            <div className="text-center">
-              <p className="text-5xl mb-4 text-foreground tabular-nums text-left font-heading font-bold md:text-6xl">
-                {metrics[activeMetric].value}
-              </p>
-              <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
-                {metrics[activeMetric].label}
-              </p>
-            </div>
+            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg" className="rounded-full px-8 py-6 text-base">
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
 
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="hero" size="lg" className="rounded-full px-8 py-6 text-base">
-              Tell us about your project!
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </a>
+          <div className="lg:col-span-5">
+            <div className="grid grid-cols-2 gap-0 border border-border">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="p-6 md:p-8 border-border [&:nth-child(odd)]:border-r [&:nth-child(-n+2)]:border-b flex flex-col justify-between min-h-[180px] md:min-h-[200px]"
+                >
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-foreground font-heading">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground leading-relaxed">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
