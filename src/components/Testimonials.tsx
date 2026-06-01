@@ -1,21 +1,52 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
-const testimonials = [
+type Segment = { text: string; bold?: boolean };
+
+const testimonials: {
+  service: string;
+  segments: Segment[];
+  author: string;
+  org: string;
+  handle: string;
+  url: string;
+}[] = [
   {
-    text: "Dew Point Labs handled our Safe deployment across multiple environments with zero issues. They know the protocol inside out and communicate clearly throughout. Exactly the kind of partner you want for critical infrastructure.",
+    service: "Multisig",
+    segments: [
+      { text: "Dew Point Labs handled our Safe deployment across multiple environments with " },
+      { text: "zero issues", bold: true },
+      { text: ". They know the protocol inside out and communicate clearly throughout. " },
+      { text: "Exactly the kind of partner you want for critical infrastructure.", bold: true },
+    ],
     author: "Head of Ecosystem",
     org: "L2 Network",
+    handle: "@l2network",
+    url: "https://x.com/",
   },
   {
-    text: "We needed Uniswap v3 live on our chain fast, with canonical status and full support. DPL delivered on all three. The process was smooth, and the team was responsive at every step.",
+    service: "DEX",
+    segments: [
+      { text: "We needed Uniswap v3 live on our chain fast, with canonical status and full support. " },
+      { text: "DPL delivered on all three.", bold: true },
+      { text: " The process was smooth, and the team was responsive at every step." },
+    ],
     author: "CTO",
     org: "L1 Foundation",
+    handle: "@l1foundation",
+    url: "https://x.com/",
   },
   {
-    text: "Most teams treat deployment as a checkbox. DPL treats it as infrastructure. There's a real difference in how they approach edge cases, and it showed.",
+    service: "Explorer",
+    segments: [
+      { text: "Most teams treat deployment as a checkbox. " },
+      { text: "DPL treats it as infrastructure.", bold: true },
+      { text: " There's a real difference in how they approach edge cases, and it showed." },
+    ],
     author: "Technical Lead",
     org: "Protocol / DAO",
+    handle: "@protocol",
+    url: "https://x.com/",
   },
 ];
 
@@ -46,14 +77,47 @@ const Testimonials = () => {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="relative rounded-none bg-card border border-border/50 p-8 flex flex-col font-heading"
             >
+              <span className="absolute top-6 right-6 text-xs font-black uppercase tracking-[0.18em] text-foreground">
+                {t.service}
+              </span>
               <div className="flex flex-col h-full">
                 <Quote className="h-8 w-8 text-muted-foreground/30 mb-6 shrink-0" />
                 <p className="text-foreground/90 leading-relaxed flex-1 mb-8">
-                  "{t.text}"
+                  &ldquo;
+                  {t.segments.map((s, idx) =>
+                    s.bold ? (
+                      <strong key={idx} className="font-bold text-foreground">{s.text}</strong>
+                    ) : (
+                      <span key={idx}>{s.text}</span>
+                    )
+                  )}
+                  &rdquo;
                 </p>
-                <div className="border-t border-border/50 pt-4 mt-auto">
-                  <p className="text-sm font-bold uppercase tracking-widest text-foreground">{t.author}</p>
-                  <p className="text-xs text-muted-foreground">[{t.org}]</p>
+                <div className="border-t border-border/50 pt-4 mt-auto flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center shrink-0 overflow-hidden border border-border/60">
+                    <span className="text-sm font-bold text-foreground">
+                      {t.author
+                        .split(" ")
+                        .map((w) => w[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold uppercase tracking-widest text-foreground truncate">{t.author}</p>
+                    <p className="text-xs text-muted-foreground truncate">[{t.org}]</p>
+                  </div>
+                  <a
+                    href={t.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${t.author} on X`}
+                    className="shrink-0 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                      <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.844l-5.36-6.99L4.7 22H1.44l8.03-9.17L1 2h7.02l4.84 6.4L18.244 2Zm-2.4 18h1.9L7.27 4H5.26l10.584 16Z" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </motion.div>
