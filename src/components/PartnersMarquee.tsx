@@ -7,6 +7,8 @@ import zksyncLogo from "@/assets/partners/zksync.png";
 import liskLogo from "@/assets/partners/lisk.png";
 import safeLogo from "@/assets/partners/safe.png";
 import uniswapLogo from "@/assets/partners/uniswap.png";
+import safeFeaturedLogo from "@/assets/partners/safe-wallet.svg";
+import uniswapFeaturedLogo from "@/assets/partners/uniswap-horizontal.svg";
 import blockscoutLogo from "@/assets/partners/blockscout.png";
 import chainlinkLogo from "@/assets/partners/chainlink.png";
 import thegraphLogo from "@/assets/partners/thegraph.png";
@@ -34,9 +36,9 @@ const logos = [
 ];
 
 const featured = [
-  { name: "Safe Wallet", logo: safeLogo, url: "https://safe.global/" },
-  { name: "Uniswap", logo: uniswapLogo, url: "https://app.uniswap.org/" },
-  { name: "Blockscout", logo: blockscoutLogo, url: "https://www.blockscout.com/" },
+  { name: "Safe Wallet", logo: safeFeaturedLogo, url: "https://safe.global/", heightClass: "h-10 md:h-12" },
+  { name: "Uniswap", logo: uniswapFeaturedLogo, url: "https://app.uniswap.org/", heightClass: "h-10 md:h-12" },
+  { name: "Blockscout", logo: blockscoutLogo, url: "https://www.blockscout.com/", heightClass: "h-14 md:h-20" },
 ];
 
 const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolean }) => (
@@ -79,22 +81,17 @@ const PartnersMarquee = () => {
               key={p.name}
               src={p.logo}
               alt={`${p.name} logo`}
-              className="h-16 md:h-20 w-auto object-contain"
+              className={`${p.heightClass} w-auto object-contain`}
             />
           ))}
         </div>
       </div>
 
-      <div className="container mx-auto px-6 mb-10 flex items-end justify-between gap-6">
-        <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">We built on</p>
-          <h2 className="text-2xl md:text-3xl font-black tracking-tight">
-            An <span className="gradient-text">open ecosystem</span> of builders
-          </h2>
-        </div>
-        <p className="hidden md:block max-w-sm text-sm text-muted-foreground">
-          Day-to-day collaborators across L1s, L2s, foundations, DAOs and protocols.
-        </p>
+      <div className="container mx-auto px-6 mb-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">We built on</p>
+        <h2 className="text-2xl md:text-3xl font-black tracking-tight">
+          An <span className="gradient-text">open ecosystem</span> of builders
+        </h2>
       </div>
       <div className="space-y-4">
         <Row duration={45} />
