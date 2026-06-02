@@ -2,6 +2,7 @@ import logoLight from "@/assets/dpl-logo-white.svg";
 import logoDark from "@/assets/dpl-logo-dark.svg";
 import protofireLight from "@/assets/protofire.svg";
 import protofireDark from "@/assets/protofire-dark.svg";
+import dplDrop from "@/assets/dpl-drop.svg";
 import { useTheme } from "@/components/ThemeProvider";
 
 const Footer = () => {
@@ -9,8 +10,14 @@ const Footer = () => {
   const logo = theme === "dark" ? logoLight : logoDark;
   const protofireLogo = theme === "dark" ? protofireLight : protofireDark;
   return (
-    <footer className="border-t border-border/40 py-16">
-      <div className="container mx-auto px-6">
+    <footer className="relative border-t border-border/40 py-16 overflow-hidden">
+      <img
+        src={dplDrop}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -right-[12%] top-1/2 -translate-y-1/2 h-[140%] w-auto opacity-25 md:opacity-30"
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img src={logo} alt="Dew Point Labs" className="h-11" />
