@@ -4,26 +4,6 @@ import dplDrop from "@/assets/dpl-drop.svg";
 
 const columns = [
   {
-    title: "Services",
-    links: [
-      { label: "Multisig", href: "#services" },
-      { label: "DEX deployments", href: "#services" },
-      { label: "Explorers", href: "#services" },
-      { label: "Lending", href: "#services" },
-      { label: "Treasury", href: "#services" },
-      { label: "Custom infra", href: "#services" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#" },
-      { label: "Track record", href: "#" },
-      { label: "Partners", href: "#partners" },
-      { label: "Contact", href: "#" },
-    ],
-  },
-  {
     title: "Resources",
     links: [
       {
@@ -32,15 +12,13 @@ const columns = [
         external: true,
       },
       { label: "Media", href: "#" },
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
+      { label: "Contact", href: "#" },
     ],
   },
   {
     title: "Social",
     links: [
       { label: "X (Twitter)", href: "https://x.com/DewPointLabs", external: true },
-      { label: "GitHub", href: "#", external: true },
     ],
   },
 ];
@@ -55,8 +33,8 @@ const Footer = () => {
         className="pointer-events-none select-none absolute -right-[14%] top-1/2 -translate-y-1/2 h-[160%] w-auto opacity-20"
       />
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-8">
-          <div className="col-span-2 lg:col-span-2 flex flex-col gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-8">
+          <div className="col-span-2 flex flex-col gap-6">
             <img src={logoWhite} alt="Dew Point Labs" className="h-11 w-auto" />
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Built on expertise. Sharpened by AI.
