@@ -24,8 +24,10 @@ const Hero = () => {
               Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
             </h1>
 
-            <p className="mb-12 max-w-2xl text-lg text-muted-foreground whitespace-pre-line">
+            <p className="mb-4 max-w-2xl text-lg text-muted-foreground">
               We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs.
+            </p>
+            <p className="mb-12 max-w-2xl text-lg font-bold text-foreground">
               Safe Wallet | Uniswap | Blockscout
             </p>
 
