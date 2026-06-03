@@ -1,4 +1,4 @@
-import logoWhite from "@/assets/dpl-logo-white.svg";
+import logoWhite from "@/assets/dpl-logo-color-white.svg";
 import protofireWhite from "@/assets/protofire.svg";
 import dplDrop from "@/assets/dpl-drop.svg";
 
@@ -34,7 +34,7 @@ const Footer = () => {
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-8">
-          <div className="col-span-2 flex flex-col gap-6">
+          <div className="col-span-2 flex flex-col gap-6 items-start text-left">
             <img src={logoWhite} alt="Dew Point Labs" className="h-11 w-auto" />
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Built on expertise. Sharpened by AI.

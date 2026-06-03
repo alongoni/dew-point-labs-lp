@@ -1,5 +1,5 @@
-import logoLight from "@/assets/dpl-logo-white.svg";
-import logoDark from "@/assets/dpl-logo-dark.svg";
+import logoLight from "@/assets/dpl-logo-color-white.svg";
+import logoDark from "@/assets/dpl-logo-color-black.svg";
 import protofireLight from "@/assets/protofire.svg";
 import protofireDark from "@/assets/protofire-dark.svg";
 import { useTheme } from "@/components/ThemeProvider";
@@ -21,8 +21,6 @@ const Navbar = () => {
 
   const links = [
     { href: "#services", label: "Services" },
-    { href: "#track-record", label: "Track Record" },
-    { href: "#partners", label: "Partners" },
   ];
 
   return (
