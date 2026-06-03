@@ -24,9 +24,9 @@ const Hero = () => {
               Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
             </h1>
 
-            <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
-              We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs. Safe Wallet and Uniswap v3
-              deployments across 110+ chains, with AI-assisted workflows that improve delivery speed and accuracy.
+            <p className="mb-12 max-w-2xl text-lg text-muted-foreground whitespace-pre-line">
+              We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs.
+              Safe Wallet | Uniswap | Blockscout
             </p>
 
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
