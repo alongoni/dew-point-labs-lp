@@ -12,7 +12,7 @@ const columns = [
         external: true,
       },
       { label: "Media", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "Book a Call", href: "#" },
     ],
   },
   {

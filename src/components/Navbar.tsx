@@ -50,7 +50,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-lg"
             >
               {link.label}
             </a>
@@ -59,9 +59,9 @@ const Navbar = () => {
             href="https://calendly.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+            className="font-semibold text-primary hover:text-primary/80 transition-colors text-lg"
           >
-            Contact
+            Book a Call
           </a>
         </div>
       </div>
