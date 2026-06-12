@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 pb-20 -mt-6">
+      <div className="container relative z-10 mx-auto px-6 pb-20 -mt-20">
         <div className="grid grid-cols-2 lg:grid-cols-4 border border-border bg-background/40 backdrop-blur-sm">
           {stats.map((stat, i) => (
             <div
