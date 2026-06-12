@@ -33,13 +33,13 @@ const logos = [
   { name: "Scroll", logo: scrollLogo },
   { name: "zkSync", logo: zksyncLogo },
   { name: "Lisk", logo: liskLogo },
-  { name: "Wirex", logo: wirexLogo, filter: "invert(1)" },
 ];
 
 const featured = [
   { name: "Safe Wallet", logo: safeFeaturedLogo, url: "https://safe.global/", heightClass: "h-10 md:h-12" },
   { name: "Uniswap", logo: uniswapFeaturedLogo, url: "https://app.uniswap.org/", heightClass: "h-10 md:h-12" },
   { name: "Blockscout", logo: blockscoutLogo, url: "https://www.blockscout.com/", heightClass: "h-8 md:h-10" },
+  { name: "Wirex", logo: wirexLogo, url: "https://wirexapp.com/", heightClass: "h-8 md:h-10", filter: "invert(1)" },
 ];
 
 const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolean }) => (
@@ -59,7 +59,7 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
             src={p.logo}
             alt={`${p.name} logo`}
             className="h-14 w-14 object-contain rounded-full"
-            style={p.filter ? { filter: p.filter } : undefined}
+            style={(p as any).filter ? { filter: (p as any).filter } : undefined}
           />
           <span className="text-base font-heading text-foreground/80">
             {p.name}
@@ -84,6 +84,7 @@ const PartnersMarquee = () => {
               src={p.logo}
               alt={`${p.name} logo`}
               className={`${p.heightClass} w-auto object-contain`}
+              style={(p as any).filter ? { filter: (p as any).filter } : undefined}
             />
           ))}
         </div>
