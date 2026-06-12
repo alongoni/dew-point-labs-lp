@@ -64,6 +64,10 @@ const Row = ({ duration, reverse = false, items }: { duration: number; reverse?:
             alt={`${p.name} logo`}
             className="h-14 w-14 object-contain rounded-full shadow-md shadow-black/20"
             style={(p as any).filter ? { filter: (p as any).filter } : undefined}
+            loading="eager"
+            decoding="sync"
+            width={56}
+            height={56}
           />
           <span className="text-base font-heading text-foreground/80">
             {p.name}
@@ -89,6 +93,8 @@ const PartnersMarquee = () => {
               alt={`${p.name} logo`}
               className={`${p.heightClass} w-auto object-contain`}
               style={(p as any).filter ? { filter: (p as any).filter } : undefined}
+              loading="eager"
+              decoding="sync"
             />
           ))}
         </div>
