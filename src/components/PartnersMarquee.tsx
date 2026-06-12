@@ -39,17 +39,21 @@ const featured = [
   { name: "Safe Wallet", logo: safeFeaturedLogo, url: "https://safe.global/", heightClass: "h-10 md:h-12" },
   { name: "Uniswap", logo: uniswapFeaturedLogo, url: "https://app.uniswap.org/", heightClass: "h-10 md:h-12" },
   { name: "Blockscout", logo: blockscoutLogo, url: "https://www.blockscout.com/", heightClass: "h-8 md:h-10" },
-  { name: "Wirex", logo: wirexLogo, url: "https://wirexapp.com/", heightClass: "h-8 md:h-10", filter: "invert(1)" },
+  { name: "Wirex", logo: wirexLogo, url: "https://wirexapp.com/", heightClass: "h-5 md:h-6", filter: "invert(1)" },
 ];
 
-const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolean }) => (
-  <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+const half = Math.ceil(logos.length / 2);
+const logosRow1 = logos.slice(0, half);
+const logosRow2 = logos.slice(half);
+
+const Row = ({ duration, reverse = false, items }: { duration: number; reverse?: boolean; items: typeof logos }) => (
+  <div className="relative overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
     <motion.div
       className="flex gap-6 w-max"
       animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
       transition={{ duration, ease: "linear", repeat: Infinity }}
     >
-      {[...logos, ...logos].map((p, i) => (
+      {[...items, ...items].map((p, i) => (
         <div
           key={`${p.name}-${i}`}
           className="flex items-center gap-3 shrink-0 px-4"
@@ -58,7 +62,7 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
           <img
             src={p.logo}
             alt={`${p.name} logo`}
-            className="h-14 w-14 object-contain rounded-full shadow-lg shadow-black/30"
+            className="h-14 w-14 object-contain rounded-full shadow-md shadow-black/20"
             style={(p as any).filter ? { filter: (p as any).filter } : undefined}
           />
           <span className="text-base font-heading text-foreground/80">
@@ -97,8 +101,8 @@ const PartnersMarquee = () => {
         </h2>
       </div>
       <div className="space-y-4">
-        <Row duration={45} />
-        <Row duration={55} reverse />
+        <Row duration={45} items={logosRow1} />
+        <Row duration={55} reverse items={logosRow2} />
       </div>
     </section>
   );
