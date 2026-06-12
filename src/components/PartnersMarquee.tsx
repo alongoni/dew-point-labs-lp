@@ -58,8 +58,8 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
           <img
             src={p.logo}
             alt={`${p.name} logo`}
-            className="h-14 w-14 object-contain rounded-full mix-blend-luminosity"
-            style={p.filter ? { filter: p.filter } : undefined}
+            className="h-14 w-14 object-contain rounded-full bg-white"
+            style={p.filter ? { filter: p.filter, background: "transparent" } : undefined}
           />
           <span className="text-base font-heading text-foreground/80">
             {p.name}
