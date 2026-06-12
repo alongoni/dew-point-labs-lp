@@ -27,8 +27,8 @@ const Hero = () => {
             <p className="mb-4 max-w-2xl text-lg text-muted-foreground">
               We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs.
             </p>
-            <p className="mb-12 max-w-2xl text-lg font-bold text-foreground">
-              Safe Wallet | Uniswap | Blockscout
+            <p className="mb-12 max-w-2xl text-lg font-bold text-foreground tracking-wide">
+              Safe Wallet&nbsp;&nbsp;|&nbsp;&nbsp;Uniswap V3&nbsp;&nbsp;|&nbsp;&nbsp;Blockscout
             </p>
 
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
