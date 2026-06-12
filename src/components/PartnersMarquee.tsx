@@ -16,6 +16,7 @@ import aaveLogo from "@/assets/partners/aave.png";
 import compoundLogo from "@/assets/partners/compound.png";
 import makerdaoLogo from "@/assets/partners/makerdao.png";
 import oneinchLogo from "@/assets/partners/1inch.png";
+import wirexLogo from "@/assets/partners/wirex.png";
 
 const logos = [
   { name: "Safe", logo: safeLogo },
@@ -25,7 +26,6 @@ const logos = [
   { name: "The Graph", logo: thegraphLogo },
   { name: "Aave", logo: aaveLogo },
   { name: "Celo", logo: celoLogo },
-  { name: "Blockscout", logo: blockscoutLogo },
   { name: "Compound", logo: compoundLogo },
   { name: "MakerDAO", logo: makerdaoLogo },
   { name: "1inch", logo: oneinchLogo },
@@ -33,6 +33,7 @@ const logos = [
   { name: "Scroll", logo: scrollLogo },
   { name: "zkSync", logo: zksyncLogo },
   { name: "Lisk", logo: liskLogo },
+  { name: "Wirex", logo: wirexLogo, filter: "invert(1)" },
 ];
 
 const featured = [
@@ -57,7 +58,8 @@ const Row = ({ duration, reverse = false }: { duration: number; reverse?: boolea
           <img
             src={p.logo}
             alt={`${p.name} logo`}
-            className="h-14 w-14 object-contain"
+            className="h-14 w-14 object-contain rounded-full mix-blend-luminosity"
+            style={p.filter ? { filter: p.filter } : undefined}
           />
           <span className="text-base font-heading text-foreground/80">
             {p.name}
