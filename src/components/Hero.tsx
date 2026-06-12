@@ -17,8 +17,8 @@ const Hero = () => {
         <div className="absolute bottom-0 left-1/3 h-[600px] w-[600px] rounded-full bg-foreground/5 blur-[120px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 pt-24 pb-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[70vh]">
+      <div className="container relative z-10 mx-auto px-6 pt-24 pb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[56vh]">
           <div className="lg:col-span-7 text-left">
             <h1 className="mb-8 text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Protofire&apos;s <span className="gradient-text">R&amp;D and Infrastructure Lab.</span>
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 pb-20 mt-2">
+      <div className="container relative z-10 mx-auto px-6 pb-20 -mt-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 border border-border bg-background/40 backdrop-blur-sm">
           {stats.map((stat, i) => (
             <div
