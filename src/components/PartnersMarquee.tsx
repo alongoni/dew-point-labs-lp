@@ -53,7 +53,7 @@ const Row = ({ duration, reverse = false, items }: { duration: number; reverse?:
       animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
       transition={{ duration, ease: "linear", repeat: Infinity }}
     >
-      {[...items, ...items].map((p, i) => (
+      {[...items, ...items, ...items, ...items].map((p, i) => (
         <div
           key={`${p.name}-${i}`}
           className="flex items-center gap-3 shrink-0 px-4"
