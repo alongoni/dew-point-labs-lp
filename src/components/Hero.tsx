@@ -28,7 +28,7 @@ const Hero = () => {
               We deploy and maintain Web3 infrastructure for L1s, L2s, foundations, and DAOs.
             </p>
             <p className="mb-12 max-w-2xl text-lg font-bold text-foreground tracking-wide">
-              Safe Wallet&nbsp;&nbsp;|&nbsp;&nbsp;Uniswap V3&nbsp;&nbsp;|&nbsp;&nbsp;Blockscout
+              Safe Wallet&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Uniswap V3&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Blockscout
             </p>
 
             <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
