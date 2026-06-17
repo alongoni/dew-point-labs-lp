@@ -87,7 +87,7 @@ const PartnersMarquee = () => {
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           {featured.map((p) => (
-            <div key={p.name} className="flex items-center gap-2">
+            <div key={p.name} className="flex items-baseline gap-2">
               <img
                 src={p.logo}
                 alt={`${p.name} logo`}
@@ -97,7 +97,7 @@ const PartnersMarquee = () => {
                 decoding="sync"
               />
               {p.name === "Uniswap" && (
-                <span className="text-2xl md:text-3xl font-black tracking-tight" style={{ color: "#F50DB4" }}>
+                <span className="text-2xl md:text-3xl font-normal tracking-tight" style={{ color: "#F50DB4" }}>
                   V3
                 </span>
               )}
