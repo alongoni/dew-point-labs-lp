@@ -20,7 +20,7 @@ import wirexLogo from "@/assets/partners/wirex.png";
 
 const logos = [
   { name: "Safe", logo: safeLogo },
-  { name: "Uniswap", logo: uniswapLogo },
+  { name: "Uniswap V3", logo: uniswapLogo },
   { name: "Gnosis", logo: gnosisLogo },
   { name: "Chainlink", logo: chainlinkLogo },
   { name: "The Graph", logo: thegraphLogo },
@@ -87,15 +87,21 @@ const PartnersMarquee = () => {
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           {featured.map((p) => (
-            <img
-              key={p.name}
-              src={p.logo}
-              alt={`${p.name} logo`}
-              className={`${p.heightClass} w-auto object-contain`}
-              style={(p as any).filter ? { filter: (p as any).filter } : undefined}
-              loading="eager"
-              decoding="sync"
-            />
+            <div key={p.name} className="flex items-center gap-2">
+              <img
+                src={p.logo}
+                alt={`${p.name} logo`}
+                className={`${p.heightClass} w-auto object-contain`}
+                style={(p as any).filter ? { filter: (p as any).filter } : undefined}
+                loading="eager"
+                decoding="sync"
+              />
+              {p.name === "Uniswap" && (
+                <span className="text-2xl md:text-3xl font-black tracking-tight" style={{ color: "#F50DB4" }}>
+                  V3
+                </span>
+              )}
+            </div>
           ))}
         </div>
       </div>
