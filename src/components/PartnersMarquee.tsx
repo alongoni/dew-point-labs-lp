@@ -87,7 +87,7 @@ const PartnersMarquee = () => {
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           {featured.map((p) => (
-            <div key={p.name} className="flex items-baseline gap-2">
+            <div key={p.name} className="flex items-center gap-2">
               <img
                 src={p.logo}
                 alt={`${p.name} logo`}
