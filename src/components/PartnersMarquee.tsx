@@ -3,6 +3,7 @@ import safeFeaturedLogo from "@/assets/partners/safe-wallet.svg";
 import uniswapFeaturedLogo from "@/assets/partners/uniswap-horizontal.svg";
 import blockscoutLogo from "@/assets/partners/blockscout.png";
 import wirexLogo from "@/assets/partners/wirex.png";
+import seiAsset from "@/assets/partners/sei.png.asset.json";
 
 const logos = [
   { name: "Rootstock", logo: "https://safe.protofire.io/logos/chains/30.png" },
@@ -21,8 +22,8 @@ const logos = [
   { name: "Autonomys", logo: "https://safe.protofire.io/logos/chains/870.png" },
   { name: "Stable", logo: "https://safe.protofire.io/logos/chains/988.png" },
   { name: "Lisk", logo: "https://safe.protofire.io/logos/chains/1135.png" },
-  { name: "Moonbeam", logo: "https://safe.protofire.io/logos/chains/1284.png" },
-  { name: "Sei", logo: "https://safe.protofire.io/logos/chains/1329.png" },
+  { name: "Moonbeam", logo: "https://safe.protofire.io/logos/chains/1284.png", bg: "#000" },
+  { name: "Sei", logo: seiAsset.url, crop: true },
   { name: "Vana", logo: "https://safe.protofire.io/logos/chains/1480.png" },
   { name: "Gravity", logo: "https://assets.safe.gravity.xyz/chains/1625/chain_logo.png" },
   { name: "Reya", logo: "https://safe.protofire.io/logos/chains/1729.png" },
@@ -83,8 +84,11 @@ const Row = ({ duration, reverse = false, items }: { duration: number; reverse?:
           <img
             src={p.logo}
             alt={`${p.name} logo`}
-            className="h-14 w-14 object-contain rounded-full shadow-md shadow-black/20"
-            style={(p as any).filter ? { filter: (p as any).filter } : undefined}
+            className={`h-14 w-14 rounded-full shadow-md shadow-black/20 ${(p as any).crop ? "object-cover" : "object-contain"}`}
+            style={{
+              ...((p as any).filter ? { filter: (p as any).filter } : {}),
+              ...((p as any).bg ? { backgroundColor: (p as any).bg } : {}),
+            }}
             loading="eager"
             decoding="sync"
             width={56}
@@ -127,14 +131,14 @@ const PartnersMarquee = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 mb-10">
+      <div className="container mx-auto px-6 mb-10 text-center">
         <h2 className="text-2xl md:text-3xl font-black tracking-tight">
           <span className="gradient-text">Chains</span> we deployed on
         </h2>
       </div>
       <div className="space-y-4">
-        <Row duration={45} items={logosRow1} />
-        <Row duration={55} reverse items={logosRow2} />
+        <Row duration={80} items={logosRow1} />
+        <Row duration={95} reverse items={logosRow2} />
       </div>
     </section>
   );
