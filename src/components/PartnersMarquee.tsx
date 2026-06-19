@@ -131,14 +131,14 @@ const PartnersMarquee = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 mb-10">
+      <div className="container mx-auto px-6 mb-10 text-center">
         <h2 className="text-2xl md:text-3xl font-black tracking-tight">
           <span className="gradient-text">Chains</span> we deployed on
         </h2>
       </div>
       <div className="space-y-4">
-        <Row duration={45} items={logosRow1} />
-        <Row duration={55} reverse items={logosRow2} />
+        <Row duration={80} items={logosRow1} />
+        <Row duration={95} reverse items={logosRow2} />
       </div>
     </section>
   );
