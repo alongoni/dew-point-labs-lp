@@ -3,6 +3,7 @@ import safeFeaturedLogo from "@/assets/partners/safe-wallet.svg";
 import uniswapFeaturedLogo from "@/assets/partners/uniswap-horizontal.svg";
 import blockscoutLogo from "@/assets/partners/blockscout.png";
 import wirexLogo from "@/assets/partners/wirex.png";
+import seiAsset from "@/assets/partners/sei.png.asset.json";
 
 const logos = [
   { name: "Rootstock", logo: "https://safe.protofire.io/logos/chains/30.png" },
