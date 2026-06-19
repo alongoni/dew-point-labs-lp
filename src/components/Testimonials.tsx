@@ -13,44 +13,34 @@ const testimonials: {
   avatar: string;
 }[] = [
   {
-    service: "Multisig",
+    service: "Stable",
     segments: [
-      { text: "Dew Point Labs handled our Safe deployment across multiple environments with " },
-      { text: "zero issues", bold: true },
-      { text: ". They know the protocol inside out and communicate clearly throughout. " },
-      { text: "Exactly the kind of partner you want for critical infrastructure.", bold: true },
+      { text: "Protofire has been a " },
+      { text: "solid partner for Stable", bold: true },
+      { text: " across both protocol work and product development. The team is reliable, detail oriented, and easy to work with, which has made it easier for us to " },
+      { text: "move quickly where needed", bold: true },
+      { text: ", especially as we scale core infrastructure." },
     ],
-    author: "Head of Ecosystem",
-    org: "L2 Network",
-    handle: "@l2network",
-    url: "https://x.com/",
-    avatar: "https://i.pravatar.cc/100?img=12",
+    author: "Brian Mehler, CEO",
+    org: "Stable",
+    handle: "@Stable",
+    url: "https://x.com/Stable",
+    avatar: "https://unavatar.io/x/Stable",
   },
   {
-    service: "DEX",
+    service: "Mantra",
     segments: [
-      { text: "We needed Uniswap v3 live on our chain fast, with canonical status and full support. " },
-      { text: "DPL delivered on all three.", bold: true },
-      { text: " The process was smooth, and the team was responsive at every step." },
+      { text: "Protofire has delivered " },
+      { text: "awesome quality of code, on schedule", bold: true },
+      { text: ", and been amazing at post-launch bug fixes. Protofire has " },
+      { text: "amazing quality engineers and PMs", bold: true },
+      { text: " who followed our requests and helped us throughout the whole development and deployment process." },
     ],
-    author: "CTO",
-    org: "L1 Foundation",
-    handle: "@l1foundation",
-    url: "https://x.com/",
-    avatar: "https://i.pravatar.cc/100?img=33",
-  },
-  {
-    service: "Explorer",
-    segments: [
-      { text: "Most teams treat deployment as a checkbox. " },
-      { text: "DPL treats it as infrastructure.", bold: true },
-      { text: " There's a real difference in how they approach edge cases, and it showed." },
-    ],
-    author: "Technical Lead",
-    org: "Protocol / DAO",
-    handle: "@protocol",
-    url: "https://x.com/",
-    avatar: "https://i.pravatar.cc/100?img=58",
+    author: "James Birney, CPO & Interim-COO",
+    org: "Mantra",
+    handle: "@MANTRA_Chain",
+    url: "https://x.com/MANTRA_Chain",
+    avatar: "https://unavatar.io/x/MANTRA_Chain",
   },
 ];
 
@@ -71,7 +61,7 @@ const Testimonials = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}

@@ -25,7 +25,7 @@ const columns = [
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-border/40 pt-20 pb-10 overflow-hidden">
+    <footer className="relative pt-8 pb-10 overflow-hidden">
       <img
         src={dplDrop}
         alt=""
