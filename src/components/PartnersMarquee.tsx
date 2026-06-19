@@ -137,8 +137,8 @@ const PartnersMarquee = () => {
         </h2>
       </div>
       <div className="space-y-4">
-        <Row duration={80} items={logosRow1} />
-        <Row duration={95} reverse items={logosRow2} />
+        <Row duration={140} items={logosRow1} />
+        <Row duration={160} reverse items={logosRow2} />
       </div>
     </section>
   );
