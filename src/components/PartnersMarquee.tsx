@@ -1,38 +1,59 @@
 import { motion } from "framer-motion";
-import gnosisLogo from "@/assets/partners/gnosis.png";
-import celoLogo from "@/assets/partners/celo.png";
-import rootstockLogo from "@/assets/partners/rootstock.png";
-import scrollLogo from "@/assets/partners/scroll.png";
-import zksyncLogo from "@/assets/partners/zksync.png";
-import liskLogo from "@/assets/partners/lisk.png";
-import safeLogo from "@/assets/partners/safe.png";
-import uniswapLogo from "@/assets/partners/uniswap.png";
 import safeFeaturedLogo from "@/assets/partners/safe-wallet.svg";
 import uniswapFeaturedLogo from "@/assets/partners/uniswap-horizontal.svg";
 import blockscoutLogo from "@/assets/partners/blockscout.png";
-import chainlinkLogo from "@/assets/partners/chainlink.png";
-import thegraphLogo from "@/assets/partners/thegraph.png";
-import aaveLogo from "@/assets/partners/aave.png";
-import compoundLogo from "@/assets/partners/compound.png";
-import makerdaoLogo from "@/assets/partners/makerdao.png";
-import oneinchLogo from "@/assets/partners/1inch.png";
 import wirexLogo from "@/assets/partners/wirex.png";
 
 const logos = [
-  { name: "Safe", logo: safeLogo },
-  { name: "Uniswap V3", logo: uniswapLogo },
-  { name: "Gnosis", logo: gnosisLogo },
-  { name: "Chainlink", logo: chainlinkLogo },
-  { name: "The Graph", logo: thegraphLogo },
-  { name: "Aave", logo: aaveLogo },
-  { name: "Celo", logo: celoLogo },
-  { name: "Compound", logo: compoundLogo },
-  { name: "MakerDAO", logo: makerdaoLogo },
-  { name: "1inch", logo: oneinchLogo },
-  { name: "Rootstock", logo: rootstockLogo },
-  { name: "Scroll", logo: scrollLogo },
-  { name: "zkSync", logo: zksyncLogo },
-  { name: "Lisk", logo: liskLogo },
+  { name: "Rootstock", logo: "https://safe.protofire.io/logos/chains/30.png" },
+  { name: "Cronos", logo: "https://safe.protofire.io/logos/chains/25.png" },
+  { name: "Telos", logo: "https://safe.protofire.io/logos/chains/40.png" },
+  { name: "Manta Pacific", logo: "https://safe.protofire.io/logos/chains/169.svg" },
+  { name: "Mint", logo: "https://safe.protofire.io/logos/chains/185.png" },
+  { name: "TAC", logo: "https://safe.protofire.io/logos/chains/239.png" },
+  { name: "Boba", logo: "https://safe.protofire.io/logos/chains/288.png" },
+  { name: "Filecoin", logo: "https://safe.protofire.io/logos/chains/314.png" },
+  { name: "zkSync", logo: "https://safe.protofire.io/logos/chains/324.png" },
+  { name: "Shape", logo: "https://safe.protofire.io/logos/chains/360.png" },
+  { name: "Cronos zkEVM", logo: "https://safe.protofire.io/logos/chains/388.png" },
+  { name: "Astar", logo: "https://safe.protofire.io/logos/chains/592.png" },
+  { name: "Flow", logo: "https://safe.protofire.io/logos/chains/747.png" },
+  { name: "Autonomys", logo: "https://safe.protofire.io/logos/chains/870.png" },
+  { name: "Stable", logo: "https://safe.protofire.io/logos/chains/988.png" },
+  { name: "Lisk", logo: "https://safe.protofire.io/logos/chains/1135.png" },
+  { name: "Moonbeam", logo: "https://safe.protofire.io/logos/chains/1284.png" },
+  { name: "Sei", logo: "https://safe.protofire.io/logos/chains/1329.png" },
+  { name: "Vana", logo: "https://safe.protofire.io/logos/chains/1480.png" },
+  { name: "Gravity", logo: "https://assets.safe.gravity.xyz/chains/1625/chain_logo.png" },
+  { name: "Reya", logo: "https://safe.protofire.io/logos/chains/1729.png" },
+  { name: "Soneium", logo: "https://safe.protofire.io/logos/chains/1868.png" },
+  { name: "Swellchain", logo: "https://safe.protofire.io/logos/chains/1923.png" },
+  { name: "Kava", logo: "https://safe.protofire.io/logos/chains/2222.png" },
+  { name: "Abstract", logo: "https://safe.protofire.io/logos/chains/2741.png" },
+  { name: "Morph", logo: "https://safe.protofire.io/logos/chains/2818.png" },
+  { name: "Botanix", logo: "https://safe.protofire.io/logos/chains/3636.png" },
+  { name: "Citrea", logo: "https://assets.safe.citrea.xyz/chains/4114/chain_logo.png" },
+  { name: "Superseed", logo: "https://safe.protofire.io/logos/chains/5330.png" },
+  { name: "Saga", logo: "https://assets.safe.saga.xyz/chains/5464/chain_logo.png" },
+  { name: "MantraChain", logo: "https://assets.safe.protofire.io/chains/5888/chain_logo.png" },
+  { name: "Nibiru", logo: "https://safe.protofire.io/logos/chains/6900.png" },
+  { name: "ZetaChain", logo: "https://safe.protofire.io/logos/chains/7000.png" },
+  { name: "Cyber", logo: "https://safe.protofire.io/logos/chains/7560.png" },
+  { name: "Etherlink", logo: "https://safe.protofire.io/logos/chains/42793.png" },
+  { name: "Zircuit", logo: "https://safe.protofire.io/logos/chains/48900.png" },
+  { name: "Sophon", logo: "https://safe.protofire.io/logos/chains/50104.png" },
+  { name: "BOB", logo: "https://safe.protofire.io/logos/chains/60808.png" },
+  { name: "Blast", logo: "https://assets.safe.protofire.io/chains/81457/chain_logo.png" },
+  { name: "Chiliz", logo: "https://safe.protofire.io/logos/chains/88888.png" },
+  { name: "Taiko", logo: "https://assets.safe.taiko.xyz/chains/167000/chain_logo.png" },
+  { name: "Scroll", logo: "https://safe.protofire.io/logos/chains/534352.png" },
+  { name: "Xai", logo: "https://safe.protofire.io/logos/chains/660279.png" },
+  { name: "zkLink Nova", logo: "https://safe.protofire.io/logos/chains/810180.png" },
+  { name: "Zora", logo: "https://safe.protofire.io/logos/chains/7777777.png" },
+  { name: "Harmony", logo: "https://safe.protofire.io/logos/chains/1666600000.png" },
+  { name: "Immutable zkEVM", logo: "https://safe.protofire.io/logos/chains/13371.png" },
+  { name: "Oasis Sapphire", logo: "https://safe.protofire.io/logos/chains/23294.png" },
+  { name: "Mode", logo: "https://safe.protofire.io/logos/chains/34443.png" },
 ];
 
 const featured = [
@@ -107,9 +128,8 @@ const PartnersMarquee = () => {
       </div>
 
       <div className="container mx-auto px-6 mb-10">
-        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">We built on</p>
         <h2 className="text-2xl md:text-3xl font-black tracking-tight">
-          An <span className="gradient-text">open ecosystem</span> of builders
+          <span className="gradient-text">Chains</span> we deployed on
         </h2>
       </div>
       <div className="space-y-4">
