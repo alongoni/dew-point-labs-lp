@@ -84,8 +84,11 @@ const Row = ({ duration, reverse = false, items }: { duration: number; reverse?:
           <img
             src={p.logo}
             alt={`${p.name} logo`}
-            className="h-14 w-14 object-contain rounded-full shadow-md shadow-black/20"
-            style={(p as any).filter ? { filter: (p as any).filter } : undefined}
+            className={`h-14 w-14 rounded-full shadow-md shadow-black/20 ${(p as any).crop ? "object-cover" : "object-contain"}`}
+            style={{
+              ...((p as any).filter ? { filter: (p as any).filter } : {}),
+              ...((p as any).bg ? { backgroundColor: (p as any).bg } : {}),
+            }}
             loading="eager"
             decoding="sync"
             width={56}
