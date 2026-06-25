@@ -23,7 +23,7 @@ const Index = () => {
           src={dplDrop}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute -right-[10%] top-1/2 -translate-y-1/2 h-[140%] w-auto opacity-25 z-0"
+          className="pointer-events-none select-none absolute -right-[5%] top-1/2 -translate-y-1/2 h-[84%] w-auto opacity-25 z-0"
         />
         <div className="relative z-10">
           <CtaSection />
