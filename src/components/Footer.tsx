@@ -1,6 +1,5 @@
 import logoWhite from "@/assets/dpl-logo-color-white.svg";
 import protofireWhite from "@/assets/protofire.svg";
-import dplDrop from "@/assets/dpl-drop.svg";
 
 const columns = [
   {
@@ -25,13 +24,7 @@ const columns = [
 
 const Footer = () => {
   return (
-    <footer className="relative pt-8 pb-10 overflow-hidden">
-      <img
-        src={dplDrop}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute -right-[14%] top-1/2 -translate-y-1/2 h-[160%] w-auto opacity-20"
-      />
+    <footer className="relative pt-8 pb-10">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-8">
           <div className="col-span-2 flex flex-col gap-6 items-start text-left">
