@@ -10,7 +10,7 @@ const logos = [
   { name: "Rootstock", logo: "https://safe.protofire.io/logos/chains/30.png" },
   { name: "RSK Testnet", logo: "https://safe.protofire.io/logos/chains/31.png" },
   { name: "Telos", logo: "https://safe.protofire.io/logos/chains/40.png" },
-  { name: "Telos Testnet", logo: "https://safe.protofire.io/logos/chains/41.png" },
+  { name: "Telos Testnet", logo: "https://safe.protofire.io/logos/chains/40.png" },
   { name: "Shibuya", logo: "https://safe.protofire.io/logos/chains/81.png" },
   { name: "Manta Pacific", logo: "https://safe.protofire.io/logos/chains/169.svg" },
   { name: "Mint", logo: "https://safe.protofire.io/logos/chains/185.png" },
@@ -18,6 +18,7 @@ const logos = [
   { name: "Boba", logo: "https://safe.protofire.io/logos/chains/288.png" },
   { name: "Filecoin", logo: "https://safe.protofire.io/logos/chains/314.png" },
   { name: "zkSync", logo: "https://safe.protofire.io/logos/chains/324.png" },
+  { name: "Shiden", logo: "https://safe.protofire.io/logos/chains/336.png" },
   { name: "Cronos Testnet", logo: "https://safe.protofire.io/logos/chains/338.png" },
   { name: "Shape", logo: "https://safe.protofire.io/logos/chains/360.png" },
   { name: "Status Network Hoodi", logo: "https://safe.protofire.io/logos/chains/374.png" },
@@ -27,7 +28,7 @@ const logos = [
   { name: "Sei", logo: seiAsset.url, crop: true },
   { name: "Flow", logo: "https://safe.protofire.io/logos/chains/747.png" },
   { name: "Autonomys", logo: "https://safe.protofire.io/logos/chains/870.png" },
-  { name: "Ault Blockchain Mainnet", logo: "https://safe.protofire.io/logos/chains/904.png" },
+  { name: "Ault Blockchain Mainnet", logo: "https://assets.safe.protofire.io/chains/904/chain_logo.jpg" },
   { name: "Mode Testnet", logo: "https://safe.protofire.io/logos/chains/919.png" },
   { name: "Stable", logo: "https://safe.protofire.io/logos/chains/988.png" },
   { name: "WEMIX3.0 Mainnet", logo: "https://safe.protofire.io/logos/chains/1111.png" },
@@ -38,7 +39,7 @@ const logos = [
   { name: "Moonbase", logo: "https://safe.protofire.io/logos/chains/1287.png" },
   { name: "Vana", logo: "https://safe.protofire.io/logos/chains/1480.png" },
   { name: "Gravity", logo: "https://assets.safe.gravity.xyz/chains/1625/chain_logo.png" },
-  { name: "Pharos Mainnet", logo: "https://safe.protofire.io/logos/chains/1672.png" },
+  { name: "Pharos Mainnet", logo: "https://safe.protofire.io/icons/placeholder.svg", placeholder: true },
   { name: "Reya", logo: "https://safe.protofire.io/logos/chains/1729.png" },
   { name: "Metal L2", logo: "https://safe.protofire.io/logos/chains/1750.png" },
   { name: "Soneium", logo: "https://safe.protofire.io/logos/chains/1868.png" },
@@ -46,38 +47,38 @@ const logos = [
   { name: "Swellchain Testnet", logo: "https://safe.protofire.io/logos/chains/1924.png" },
   { name: "Kava Testnet", logo: "https://safe.protofire.io/logos/chains/2221.png" },
   { name: "Kava", logo: "https://safe.protofire.io/logos/chains/2222.png" },
-  { name: "TAC Saint Petersburg", logo: "https://safe.protofire.io/logos/chains/2391.png" },
+  { name: "TAC Saint Petersburg", logo: "https://safe.protofire.io/logos/chains/2390.png" },
   { name: "Abstract", logo: "https://safe.protofire.io/logos/chains/2741.png" },
   { name: "Morph", logo: "https://safe.protofire.io/logos/chains/2818.png" },
   { name: "Morph Hoodi", logo: "https://safe.protofire.io/logos/chains/2910.png" },
   { name: "Botanix", logo: "https://safe.protofire.io/logos/chains/3636.png" },
   { name: "Citrea", logo: "https://assets.safe.citrea.xyz/chains/4114/chain_logo.png" },
   { name: "Lisk Sepolia", logo: "https://safe.protofire.io/logos/chains/4202.png" },
-  { name: "Tempo Mainnet", logo: "https://safe.protofire.io/logos/chains/4217.png" },
+  { name: "Tempo Mainnet", logo: "https://assets.safe.protofire.io/chains/4217/chain_logo.png" },
   { name: "Mantle", logo: "https://safe.protofire.io/logos/chains/5000.png" },
   { name: "Mantle Sepolia Testnet", logo: "https://safe.protofire.io/logos/chains/5003.png" },
   { name: "Citrea Testnet", logo: "https://safe.protofire.io/logos/chains/5115.png" },
   { name: "Superseed", logo: "https://safe.protofire.io/logos/chains/5330.png" },
   { name: "Saga", logo: "https://assets.safe.saga.xyz/chains/5464/chain_logo.png" },
-  { name: "MantraChain Dukong Testnet", logo: "https://safe.protofire.io/logos/chains/5887.png" },
+  { name: "MantraChain Dukong Testnet", logo: "https://assets.safe.protofire.io/chains/5887/chain_logo.png" },
   { name: "MantraChain", logo: "https://assets.safe.protofire.io/chains/5888/chain_logo.png" },
-  { name: "Mizuhiki Awaji Testnet", logo: "https://safe.protofire.io/logos/chains/6497.png" },
+  { name: "Mizuhiki Awaji Testnet", logo: "https://assets.safe.protofire.io/chains/6497/chain_logo.png" },
   { name: "Nibiru", logo: "https://safe.protofire.io/logos/chains/6900.png" },
   { name: "Nibiru Testnet", logo: "https://safe.protofire.io/logos/chains/6911.png" },
   { name: "ZetaChain", logo: "https://safe.protofire.io/logos/chains/7000.png" },
   { name: "ZetaChain Testnet", logo: "https://safe.protofire.io/logos/chains/7001.png" },
   { name: "Cyber", logo: "https://safe.protofire.io/logos/chains/7560.png" },
   { name: "Arena-z Mainnet", logo: "https://safe.protofire.io/logos/chains/7897.png" },
-  { name: "Alpen Testnet", logo: "https://safe.protofire.io/logos/chains/8150.png" },
-  { name: "Auto-EVM Autonomys", logo: "https://safe.protofire.io/logos/chains/8700.png" },
-  { name: "Plasma Mainnet", logo: "https://safe.protofire.io/logos/chains/9745.png" },
+  { name: "Alpen Testnet", logo: "https://assets.safe.protofire.io/chains/8150/chain_logo.png" },
+  { name: "Auto-EVM Autonomys", logo: "https://safe.protofire.io/logos/chains/490000.png" },
+  { name: "Plasma Mainnet", logo: "https://safe.protofire.io/logos/chains/9746.png" },
   { name: "Plasma Testnet", logo: "https://safe.protofire.io/logos/chains/9746.png" },
-  { name: "Ault Blockchain Testnet", logo: "https://safe.protofire.io/logos/chains/10904.png" },
+  { name: "Ault Blockchain Testnet", logo: "https://assets.safe.protofire.io/chains/10904/chain_logo.jpg" },
   { name: "Shape Sepolia Testnet", logo: "https://safe.protofire.io/logos/chains/11011.png" },
   { name: "Abstract Testnet", logo: "https://safe.protofire.io/logos/chains/11124.png" },
   { name: "Immutable zkEVM", logo: "https://safe.protofire.io/logos/chains/13371.png" },
   { name: "Immutable zkEVM Testnet", logo: "https://safe.protofire.io/logos/chains/13473.png" },
-  { name: "Gravity Sepolia", logo: "https://safe.protofire.io/logos/chains/13505.png" },
+  { name: "Gravity Sepolia", logo: "https://assets.safe.gravity.xyz/chains/13505/chain_logo.png" },
   { name: "Vana Moksha Testnet", logo: "https://safe.protofire.io/logos/chains/14800.png" },
   { name: "Oasis Sapphire", logo: "https://safe.protofire.io/logos/chains/23294.png" },
   { name: "Oasis Sapphire Testnet", logo: "https://safe.protofire.io/logos/chains/23295.png" },
@@ -85,43 +86,43 @@ const logos = [
   { name: "Zilliqa EVM", logo: "https://safe.protofire.io/logos/chains/32769.png" },
   { name: "Zilliqa EVM Testnet", logo: "https://safe.protofire.io/logos/chains/33101.png" },
   { name: "Mode", logo: "https://safe.protofire.io/logos/chains/34443.png" },
-  { name: "ADI Network", logo: "https://safe.protofire.io/logos/chains/36900.png" },
+  { name: "ADI Network", logo: "https://assets.safe.adifoundation.ai/chains/36900/chain_logo.jpg" },
   { name: "EDU", logo: "https://safe.protofire.io/logos/chains/41923.png" },
-  { name: "Tempo Testnet Moderato", logo: "https://safe.protofire.io/logos/chains/42431.png" },
+  { name: "Tempo Testnet Moderato", logo: "https://assets.safe.protofire.io/chains/42431/chain_logo.png" },
   { name: "Etherlink", logo: "https://safe.protofire.io/logos/chains/42793.png" },
-  { name: "Zircuit Garfield Testnet", logo: "https://safe.protofire.io/logos/chains/48898.png" },
+  { name: "Zircuit Garfield Testnet", logo: "https://safe.protofire.io/logos/chains/48899.png" },
   { name: "Zircuit", logo: "https://safe.protofire.io/logos/chains/48900.png" },
   { name: "Sophon", logo: "https://safe.protofire.io/logos/chains/50104.png" },
   { name: "Linea Sepolia", logo: "https://safe.protofire.io/logos/chains/59141.png" },
   { name: "Linea", logo: "https://safe.protofire.io/logos/chains/59144.png" },
   { name: "BOB", logo: "https://safe.protofire.io/logos/chains/60808.png" },
-  { name: "Bepolia", logo: "https://safe.protofire.io/logos/chains/80069.png" },
-  { name: "Berachain", logo: "https://safe.protofire.io/logos/chains/80094.png" },
+  { name: "Bepolia", logo: "https://assets.safe.berachain.com/chains/80069/chain_logo.png" },
+  { name: "Berachain", logo: "https://safe.protofire.io/logos/chains/80094.jpeg" },
   { name: "Blast", logo: "https://assets.safe.protofire.io/chains/81457/chain_logo.png" },
   { name: "Chiliz Spicy Testnet", logo: "https://safe.protofire.io/logos/chains/88882.png" },
   { name: "Chiliz", logo: "https://safe.protofire.io/logos/chains/88888.png" },
-  { name: "ADI Network AB Testnet", logo: "https://safe.protofire.io/logos/chains/99999.png" },
+  { name: "ADI Network AB Testnet", logo: "https://assets.safe.adifoundation.ai/chains/99999/chain_logo.jpg" },
   { name: "Etherlink Shadownet Testnet", logo: "https://safe.protofire.io/logos/chains/127823.png" },
   { name: "Taiko", logo: "https://assets.safe.taiko.xyz/chains/167000/chain_logo.png" },
-  { name: "Taiko Hoodi", logo: "https://safe.protofire.io/logos/chains/167013.png" },
-  { name: "Moca Chain Testnet", logo: "https://safe.protofire.io/logos/chains/222888.png" },
+  { name: "Taiko Hoodi", logo: "https://assets.safe.taiko.xyz/chains/167013/chain_logo.png" },
+  { name: "Moca Chain Testnet", logo: "https://assets.safe.protofire.io/chains/222888/chain_logo.jpg" },
   { name: "Filecoin Calibration", logo: "https://safe.protofire.io/logos/chains/314159.png" },
   { name: "Hoodi Testnet", logo: "https://safe.protofire.io/logos/chains/560048.png" },
   { name: "Open Campus Codex", logo: "https://safe.protofire.io/logos/chains/656476.png" },
   { name: "Xai", logo: "https://safe.protofire.io/logos/chains/660279.png" },
-  { name: "Pharos Atlantic Testnet", logo: "https://safe.protofire.io/logos/chains/688689.png" },
+  { name: "Pharos Atlantic Testnet", logo: "https://assets.safe.pharosnetwork.xyz/chains/688689/chain_logo.jpg" },
   { name: "Ink Sepolia", logo: "https://safe.protofire.io/logos/chains/763373.png" },
   { name: "BOB Sepolia", logo: "https://safe.protofire.io/logos/chains/808813.png" },
   { name: "zkLink Nova", logo: "https://safe.protofire.io/logos/chains/810180.png" },
-  { name: "Zora", logo: "https://safe.protofire.io/logos/chains/7777777.png" },
-  { name: "Ethereal", logo: "https://safe.protofire.io/logos/chains/5064014.png" },
-  { name: "DogeOS Chikyū Testnet", logo: "https://safe.protofire.io/logos/chains/6281971.png" },
-  { name: "Humanity Mainnet", logo: "https://safe.protofire.io/logos/chains/6985385.png" },
-  { name: "Humanity Testnet", logo: "https://safe.protofire.io/logos/chains/7080969.png" },
+  { name: "Ethereal", logo: "https://assets.safe.ethereal.trade/chains/5064014/chain_logo.png" },
+  { name: "DogeOS Chikyū Testnet", logo: "https://assets.safe.protofire.io/chains/6281971/chain_logo.png" },
+  { name: "Humanity Mainnet", logo: "https://assets.safe.humanity.org/chains/6985385/chain_logo.png" },
+  { name: "Humanity Testnet", logo: "https://assets.safe.humanity.org/chains/7080969/chain_logo.png" },
   { name: "Saakuru", logo: "https://safe.protofire.io/logos/chains/7225878.png" },
+  { name: "Zora", logo: "https://safe.protofire.io/logos/chains/7777777.png" },
   { name: "OP Sepolia", logo: "https://safe.protofire.io/logos/chains/11155420.png" },
-  { name: "Ethereal Testnet", logo: "https://safe.protofire.io/logos/chains/13374202.png" },
-  { name: "Blast Sepolia", logo: "https://safe.protofire.io/logos/chains/168587773.png" },
+  { name: "Ethereal Testnet", logo: "https://assets.safe.ethereal.trade/chains/13374202/chain_logo.png" },
+  { name: "Blast Sepolia", logo: "https://assets.safe.protofire.io/chains/168587773/chain_logo.png" },
   { name: "Zora Testnet", logo: "https://safe.protofire.io/logos/chains/999999999.png" },
   { name: "Harmony", logo: "https://safe.protofire.io/logos/chains/1666600000.png" },
   { name: "Harmony Testnet", logo: "https://safe.protofire.io/logos/chains/1666700000.png" },
@@ -152,19 +153,25 @@ const Row = ({ duration, reverse = false, items }: { duration: number; reverse?:
           className="flex items-center gap-3 shrink-0 px-4"
           title={p.name}
         >
-          <img
-            src={p.logo}
-            alt={`${p.name} logo`}
-            className={`h-14 w-14 rounded-full shadow-md shadow-black/20 ${(p as any).crop ? "object-cover" : "object-contain"}`}
-            style={{
-              ...((p as any).filter ? { filter: (p as any).filter } : {}),
-              ...((p as any).bg ? { backgroundColor: (p as any).bg } : {}),
-            }}
-            loading="eager"
-            decoding="sync"
-            width={56}
-            height={56}
-          />
+          {(p as any).placeholder ? (
+            <div className="h-14 w-14 rounded-full shadow-md shadow-black/20 bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center text-xs font-bold text-foreground/80 border border-border/50">
+              {p.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
+            </div>
+          ) : (
+            <img
+              src={p.logo}
+              alt={`${p.name} logo`}
+              className={`h-14 w-14 rounded-full shadow-md shadow-black/20 ${(p as any).crop ? "object-cover" : "object-contain"}`}
+              style={{
+                ...((p as any).filter ? { filter: (p as any).filter } : {}),
+                ...((p as any).bg ? { backgroundColor: (p as any).bg } : {}),
+              }}
+              loading="eager"
+              decoding="sync"
+              width={56}
+              height={56}
+            />
+          )}
           <span className="text-base font-heading text-foreground/80">
             {p.name}
           </span>
@@ -208,8 +215,8 @@ const PartnersMarquee = () => {
         </h2>
       </div>
       <div className="space-y-4">
-        <Row duration={140} items={logosRow1} />
-        <Row duration={160} reverse items={logosRow2} />
+        <Row duration={280} items={logosRow1} />
+        <Row duration={320} reverse items={logosRow2} />
       </div>
     </section>
   );
